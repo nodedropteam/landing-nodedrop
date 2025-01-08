@@ -2,19 +2,19 @@ import React from 'react'
 import Link from 'next/link'
 import {
     NavigationMenu,
-    NavigationMenuContent,
-    NavigationMenuIndicator,
     NavigationMenuItem,
     NavigationMenuLink,
     NavigationMenuList,
-    NavigationMenuTrigger,
-    NavigationMenuViewport,
+    // NavigationMenuContent,
+    // NavigationMenuIndicator,
+    // NavigationMenuTrigger,
+    // NavigationMenuViewport,
     navigationMenuTriggerStyle
 } from "@/components/ui/navigation-menu"
 import { Button } from './button'
 
 
-const navItems: any[] = [
+const navItems: Array<{ title: string, href: string }> = [
     {
         title: 'How It Works',
         href: '/#process'

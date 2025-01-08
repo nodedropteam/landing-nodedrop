@@ -1,6 +1,6 @@
 import React from 'react'
 
-const portfolio: any[] = [
+const portfolio: Array<object> = [
     {}, {}, {}, {}
 ]
 

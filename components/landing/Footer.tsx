@@ -8,7 +8,9 @@ export default function Footer() {
         <section id="contact" className='relative'>
             <div className="u-container u-container--tall flex flex-col justify-between">
                 <div className="stack space-y-10 u-container">
-                    <h2 className='text-4xl sm:text-5xl lg:text-5xl font-bold text-center'>Let's Build Something Amazing!</h2>
+                    <h2 className='text-4xl sm:text-5xl lg:text-5xl font-bold text-center'>
+                        {"Let's Build Something Amazing!"}
+                    </h2>
                     <div className="button-row max-sm:[&>*]:w-full max-sm:[&>*>*]:w-full flex flex-col sm:flex-row gap-5 justify-center">
                         <Link href={`https://cal.com/nodedrop-meet/discovery`} passHref target='_blank'>
                             <Button>Book a 15 min Consultation</Button>
