@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
 import { Button } from '../ui/button'
-// import {Twitter, Instagram} from 'iconoir-react'
 
 export default function Footer() {
     return (

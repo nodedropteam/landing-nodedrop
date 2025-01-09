@@ -21,6 +21,14 @@ export default {
 			'6xl': '80px',
 		},
 		extend: {
+			screens: {
+				'phone': '480px',
+				'landscape': '640px',
+				'tablet': '768px',
+				'laptop': '1024px',
+				'desktop': '1280px',
+				'xl': '1440px',
+			},
 			colors: {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',

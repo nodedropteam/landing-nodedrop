@@ -1,19 +1,19 @@
 import React from 'react'
-import {PhoneIncome, Page, MacOsWindow} from 'iconoir-react'
+// import {PhoneIncome, Page, MacOsWindow} from 'iconoir-react'
 
 const process = [
     {
-        icon: <PhoneIncome className='size-10'/>,
+        icon: '',
         title: 'Discovery Call',
         description: 'We start with a free 15-minute consultation to understand your needs, goals, and challenges.',
     },
     {
-        icon: <Page className='size-10'/>,
+        icon: '',
         title: 'Strategy & Proposal',
         description: 'Based on our discussion, we create a tailored plan outlining the timeline, pricing, and project details.',
     },
     {
-        icon: <MacOsWindow className='size-10'/>,
+        icon: '',
         title: 'Design & Development',
         description: 'Our team designs a visually stunning website and builds it with the latest technologies to ensure functionality and responsiveness.',
     },

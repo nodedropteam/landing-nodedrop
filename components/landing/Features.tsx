@@ -1,24 +1,24 @@
 import React from 'react'
-import { Planet, Clock, Star, Phone } from 'iconoir-react'
+// import { Planet, Clock, Star, Phone } from 'iconoir-react'
 
 const features = [
     {
-        icon: <Planet className='size-10'/>,
+        icon: '',
         title: 'Our global team ensures 24/7 availability.',
         description: '',
     },
     {
-        icon: <Clock className='size-10'/>,
+        icon: '',
         title: 'We deliver projects efficiently and on time.',
         description: '',
     },
     {
-        icon: <Star className='size-10'/>,
+        icon: '',
         title: 'We tailor our solutions to your unique business needs.',
         description: '',
     },
     {
-        icon: <Phone className='size-10'/>,
+        icon: '',
         title: 'Get expert advice with our free 15-minute consultations.',
         description: '',
     },
