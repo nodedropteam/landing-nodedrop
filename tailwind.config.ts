@@ -23,7 +23,7 @@ export default {
 		extend: {
 			screens: {
 				'phone': '480px',
-				'landscape': '640px',
+				'plandscape': '640px',
 				'tablet': '768px',
 				'laptop': '1024px',
 				'desktop': '1280px',
