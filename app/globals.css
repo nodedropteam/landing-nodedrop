@@ -79,3 +79,39 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
+
+
+/*Media Scroller*/
+
+.media-scroller {
+  overscroll-behavior-inline: contain;
+  border-color: red;
+}
+
+.snaps-inline {
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 20px;
+}
+
+.snaps-inline > * {
+  scroll-snap-align: start;
+}
+
+/*Custom Scrollbar*/
+
+.media-scroller::-webkit-scrollbar {
+  width: 20px;
+}
+
+.media-scroller::-webkit-scrollbar-track {
+  /* background-color: hsl(var(--accent)); */
+  background-color: transparent;
+}
+
+.media-scroller::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--secondary));
+  border: 4px solid inherit;
+  border-radius: 99px;
+  cursor: pointer;
+}
+

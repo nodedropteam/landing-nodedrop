@@ -1,7 +1,5 @@
 import React from 'react'
-import Services from '../landing/Services';
-import Process from '../landing/Process';
-import Portfolio from '../landing/Portfolio';
+import Portfolio from '../sections/Portfolio';
 
 interface CallToAction {
     _key: string;
@@ -41,7 +39,7 @@ export default function Gallery({ section }: Props) {
 
     switch (section.sectionName) {
         case 'portfolio':
-            return <Portfolio />
+            return <Portfolio section={section} />
 
         default:
             return null
