@@ -63,7 +63,7 @@
   h4,
   h5,
   h6 {
-    @apply font-[family-name:var(--font-header-sans)] leading-[1em] text-balance;
+    @apply font-[family-name:var(--font-header-sans)] text-balance;
   }
 
   p {
@@ -72,6 +72,10 @@
 
   .text-box {
     @apply w-full sm:w-[90%] lg:w-[80%];
+  }
+
+  .u-grid {
+    @apply  grid grid-flow-col auto-cols-[25%] gap-3;
   }
 }
 
@@ -114,4 +118,6 @@
   border-radius: 99px;
   cursor: pointer;
 }
+
+.bento-grid {}
 
