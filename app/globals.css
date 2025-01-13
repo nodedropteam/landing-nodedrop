@@ -42,7 +42,7 @@
   }
 
   body {
-    @apply bg-background text-foreground font-[family-name:var(--font-body-sans)] leading-[1.3em];
+    @apply bg-background text-foreground font-[family-name:var(--font-body-sans)] leading-[1.3em] scroll-smooth;
   }
 
   .u-container {

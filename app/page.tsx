@@ -28,7 +28,7 @@ export default async function page() {
   // console.log(sections[0])
 
   return (
-    <div>
+    <>
       <Header />
       {sections[0].pageBuilder.map((section: any) => {
         switch (section._type) {
@@ -45,6 +45,6 @@ export default async function page() {
         }
       })}
       <Footer />
-    </div>
+    </>
   )
 }
