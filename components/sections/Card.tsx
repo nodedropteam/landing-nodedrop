@@ -1,6 +1,6 @@
 import React from 'react'
-import Services from '../landing/Services';
-import Process from '../landing/Process';
+import Services from '../sections/Services';
+import Process from '../sections/Process';
 
 interface CallToAction {
     _key: string;
@@ -40,9 +40,9 @@ export default function Card({ section }: Props) {
 
     switch (section.sectionName) {
         case 'services':
-            return <Services />
+            return <Services section={section} />
         case 'how-it-works':
-            return <Process />
+            return (<Process section={section} />)
         case 'pricing':
             return null
 

@@ -9,16 +9,16 @@ export default {
 	],
 	theme: {
 		fontSize: {
-			'xs': '12px',
-			'sm': '14px',
-			'base': '1rem',
-			'lg': '20px',
-			'xl': '24px',
-			'2xl': '28px',
-			'3xl': '32px',
-			'4xl': '40px',
-			'5xl': '64px',
-			'6xl': '80px',
+			'xs': ['12px', '1.5em'],
+			'sm': ['14px', '1.5em'],
+			'base': ['1rem', '1.25em'],
+			'lg': ['20px', '1.25em'],
+			'xl': ['24px', '1.25em'],
+			'2xl': ['28px', '1.25em'],
+			'3xl': ['32px', '1em'],
+			'4xl': ['40px', '1em'],
+			'5xl': ['64px', '1em'],
+			'6xl': ['80px', '1em'],
 		},
 		extend: {
 			screens: {
