@@ -48,7 +48,7 @@ export default async function RootLayout({
       <body
         className={`${fontBodySans.variable} ${fontHeaderSans.variable} antialiased`}
       >
-        <div id="main">{children}</div>
+        <div id="main" className="smooth-scroll">{children}</div>
       </body>
     </html>
   );

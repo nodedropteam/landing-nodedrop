@@ -1,19 +1,21 @@
 import React from 'react'
+import { Card, CardDescription, CardHeader, CardTitle } from '../ui/card'
+import Image from 'next/image'
 // import {PhoneIncome, Page, MacOsWindow} from 'iconoir-react'
 
 const process = [
     {
-        icon: '',
+        icon: '/user-search.svg',
         title: 'Discovery Call',
         description: 'We start with a free 15-minute consultation to understand your needs, goals, and challenges.',
     },
     {
-        icon: '',
+        icon: '/map.svg',
         title: 'Strategy & Proposal',
         description: 'Based on our discussion, we create a tailored plan outlining the timeline, pricing, and project details.',
     },
     {
-        icon: '',
+        icon: '/links.svg',
         title: 'Design & Development',
         description: 'Our team designs a visually stunning website and builds it with the latest technologies to ensure functionality and responsiveness.',
     },
@@ -30,19 +32,20 @@ export default function Process() {
                     <div className="card-grid">
                         <div className="card-content auto-grid gap-5">
                             {
-                                process.map((item, index) => {
-                                    return (
-                                        <div className="card bg-secondary text-secondary-foreground rounded-3xl" key={index}>
-                                            <div className="card-body space-y-3 p-5">
-                                                <div className="text-primary">
-                                                    {item.icon}
-                                                </div>
-                                                <h3 className='font-bold text-xl sm:text-4xl'>{item.title}</h3>
-                                                <p className=''>{item.description}</p>
-                                            </div>
-                                        </div>
-                                    )
-                                })
+                                process.map((item, index) => (
+                                        <Card key={index} className='bg-secondary text-secondary-foreground rounded-3xl border-none'>
+                                            <CardHeader>
+                                                <Image
+                                                    src={item.icon}
+                                                    width={56}
+                                                    height={56}
+                                                    alt='icon'
+                                                />
+                                                <CardTitle>{item.title}</CardTitle>
+                                                <CardDescription>{item.description}</CardDescription>
+                                            </CardHeader>
+                                        </Card>
+                                ))
                             }
                         </div>
                     </div>

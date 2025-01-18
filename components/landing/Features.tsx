@@ -1,24 +1,21 @@
 import React from 'react'
+import { Card, CardHeader, CardTitle } from '../ui/card'
+import Image from 'next/image'
 // import { Planet, Clock, Star, Phone } from 'iconoir-react'
 
 const features = [
     {
-        icon: '',
-        title: 'Our global team ensures 24/7 availability.',
-        description: '',
-    },
-    {
-        icon: '',
+        icon: '/lamp-charge.svg',
         title: 'We deliver projects efficiently and on time.',
         description: '',
     },
     {
-        icon: '',
+        icon: '/medal-star.svg',
         title: 'We tailor our solutions to your unique business needs.',
         description: '',
     },
     {
-        icon: '',
+        icon: '/bubble.svg',
         title: 'Get expert advice with our free 15-minute consultations.',
         description: '',
     },
@@ -42,14 +39,17 @@ export default function Features() {
                             {
                                 features.map((feature, index) => (
                                     <div className="card" key={index}>
-                                        <div className="card-body space-y-3">
-                                            <div className="icon text-primary">
-                                                {feature.icon}
-                                            </div>
-                                            <h3 className='text-xl sm:text-2xl'>
-                                                {feature.title}
-                                            </h3>
-                                        </div>
+                                        <Card key={index} className='bg-inherit border-none text-inherit shadow-none'>
+                                            <CardHeader>
+                                                <Image 
+                                                src={feature.icon}
+                                                width={56}
+                                                height={56}
+                                                alt='icon'
+                                                />
+                                                <CardTitle>{feature.title}</CardTitle>
+                                            </CardHeader>
+                                        </Card>
                                     </div>
                                 ))
                             }

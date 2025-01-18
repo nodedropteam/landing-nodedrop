@@ -1,30 +1,41 @@
+import Image from 'next/image'
 import React from 'react'
-import MediaScroller from '../ui/media-scroller'
+import { Card } from '../ui/card'
 
-const portfolio: Array<object> = [
-    {}, {}, {}, {}
+const posts: any[] = [
+    {
+        title: "Restaurant Steakhouse",
+        image: '/restaurant_steakhouse.jpg'
+    },
+    {
+        title: "Little Horizons",
+        image: '/daycare.jpg'
+    }
 ]
 
 export default function Portfolio() {
     return (
-        <section id='portfolio' className='relative bg-foreground text-background'>
-            <div className="u-container pt-32 pr-0">
-                <div className="stack space-y-10">
-                    <h3 className='text-3xl sm:text-4xl w-full max-w-screen-sm'>
-                        Our innovative designs help businesses stand out, attract clients,
-                        and generate leads effortlessly.
-                    </h3>
-                    <MediaScroller classNames='plandscape:auto-cols-[47%] laptop:auto-cols-[33%]'>
-                        {
-                            portfolio.map((item, index) => {
-                                return (
-                                    <div key={index} className="image-wrapper h-[300px] 
-                                        w-full bg-primary rounded-3xl mb-3">
-                                    </div>
-                                )
-                            })
-                        }
-                    </MediaScroller>
+        <section id="portfolio" className="relative">
+            <div className="u-container bg-foreground text-background space-y-[40px]">
+                <div className="stack textbox">
+                    <h2 className='font-medium text-3xl plandscape:text-4xl max-w-[640px]'>Our innovative designs help businesses stand out,
+                        attract clients, and generate leads effortlessly.</h2>
+                </div>
+                <div className="grid auto-grid gap-[40px]">
+                    {
+                        posts && posts.map((post, index) => (
+                            <div key={index}>
+                                <Card className="relative h-[350px] mx-auto aspect-square rounded-3xl overflow-hidden">
+                                    <Image
+                                        src={post.image}
+                                        alt={post.title}
+                                        fill
+                                        className='object-cover object-top'
+                                    />
+                                </Card>
+                            </div>
+                        ))
+                    }
                 </div>
             </div>
         </section>

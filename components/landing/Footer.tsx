@@ -11,11 +11,11 @@ export default function Footer() {
                         {"Let's Build Something Amazing!"}
                     </h2>
                     <div className="button-row max-sm:[&>*]:w-full max-sm:[&>*>*]:w-full flex flex-col sm:flex-row gap-5 justify-center">
-                        <Link href={`https://cal.com/nodedrop-meet/discovery`} passHref target='_blank'>
+                        <Link href={process.env.DISCOVERY_CALL_LINK as string || '#'} passHref target='_blank'>
                             <Button>Book a 15 min Consultation</Button>
                         </Link>
                         <Link href={`/#portfolio`} passHref className=''>
-                            <Button variant={`secondary`}>or, See Our Work</Button>
+                            <Button variant={`secondary`}>or, See our work</Button>
                         </Link>
                     </div>
                 </div>

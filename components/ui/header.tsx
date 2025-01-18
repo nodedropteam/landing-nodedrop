@@ -55,9 +55,9 @@ export default function Header() {
                             })
                         }
                         <NavigationMenuItem className='!ml-[40px]'>
-                            <Link href="https://cal.com/nodedrop-meet/discovery" legacyBehavior passHref target='_blank'>
+                            <Link href={process.env.DISCOVERY_CALL_LINK as string || '#'} passHref target='_blank'>
                                 <Button>
-                                    Book A Free Consultation
+                                    Book a Free Consultation
                                 </Button>
                             </Link>
                         </NavigationMenuItem>
