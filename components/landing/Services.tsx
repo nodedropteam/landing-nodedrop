@@ -3,28 +3,26 @@ import PortableTextBody from '../PortableTextBody'
 import { myPortableTextComponents } from '../PortableTextComponents'
 import BentoGrid from '../ui/bento-grid'
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '../ui/card'
-import { urlForImage } from '@/lib/urlForImage'
-import Image from 'next/image'
 
 const services = [
     {
         title: 'Design',
-        description: 'We build websites that are fast, secure, and scalable.',
+        description: 'Tailored designs that reflect your brand identity and solve specific business challenges.',
         image: '/media__44.jpg',
     },
     {
         title: 'Development',
-        description: 'We build mobile apps that are fast, secure, and scalable.',
+        description: 'We build custom solutions, on any platform specific to your business needs.',
         image: '/media__42.jpg',
     },
     {
         title: 'Brand identity & Concept design',
-        description: 'We build websites that are fast, secure, and scalable.',
+        description: 'We help you stand out and reach your audience with your message, and personality.',
         image: '',
     },
     {
         title: 'Maintenance & Hosting',
-        description: 'We build websites that are fast, secure, and scalable.',
+        description: 'We build software that is fast, secure, and scalable.',
         image: '',
     }
 ]

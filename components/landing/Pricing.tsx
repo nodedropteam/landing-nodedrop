@@ -11,8 +11,8 @@ const pricingTiers = [
             'Free Copywriting',
             '1x round of revision',
             'Custom website wireframing',
-            'Daily updates',
-            'Responsive design'
+            'Daily updates until project completion',
+            'Responsive design for mobile, tablet and laptop'
         ]
     },
     {
@@ -21,7 +21,10 @@ const pricingTiers = [
         features: [
             'Full Service',
             'Expert project management',
-            'On call developer/ designer'
+            'On call developer/ designer',
+            'Pitch deck and branding presentation',
+            'Unlimited design and development requests',
+            'Access to our digital collection; (videos, audio, photos, etc.)',
         ]
     }
 ]
