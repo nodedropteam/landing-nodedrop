@@ -24,10 +24,10 @@ export default function Footer() {
                         <p>Built by <Link href={`/`} className='underline'>nodedrop</Link>.</p>
                         <p className='text-sm'>© 2025 nodedrop. All rights reserved.</p>
                         <nav className='space-x-5'>
-                            <Link href={`/#home`} passHref>
+                            <Link href={`https://x.com/chilumutale`} passHref target='_blank'>
                                 <Button variant={`link`}>Twitter</Button>
                             </Link>
-                            <Link href={`/#portfolio`} passHref>
+                            <Link href={`https://www.instagram.com/nodedrop.design/`} passHref target='_blank'>
                                 <Button variant={`link`}>Instagram</Button>
                             </Link>
                         </nav>
