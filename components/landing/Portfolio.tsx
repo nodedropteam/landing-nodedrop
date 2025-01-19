@@ -21,19 +21,17 @@ export default function Portfolio() {
                     <h2 className='font-medium text-3xl plandscape:text-4xl max-w-[640px]'>Our innovative designs help businesses stand out,
                         attract clients, and generate leads effortlessly.</h2>
                 </div>
-                <div className="grid auto-grid gap-[40px]">
+                <div className="flex gap-[40px] flex-col tablet:flex-row items-center">
                     {
                         posts && posts.map((post, index) => (
-                            <div key={index}>
-                                <Card className="relative h-[350px] mx-auto aspect-square rounded-3xl overflow-hidden">
-                                    <Image
-                                        src={post.image}
-                                        alt={post.title}
-                                        fill
-                                        className='object-cover object-top'
-                                    />
-                                </Card>
-                            </div>
+                            <Card key={index} className="relative w-full h-[350px] max-w-[350px] rounded-3xl overflow-hidden">
+                                <Image
+                                    src={post.image}
+                                    alt={post.title}
+                                    fill
+                                    className='object-cover object-top'
+                                />
+                            </Card>
                         ))
                     }
                 </div>
