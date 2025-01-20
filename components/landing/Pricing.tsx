@@ -6,7 +6,7 @@ import Link from 'next/link'
 const pricingTiers = [
     {
         name: 'One-time service',
-        description: 'Perfect for one and done ',
+        description: 'A complete, custom website delivered to you with full ownership—no ongoing commitments.',
         features: [
             'Free Copywriting',
             '1x round of revision',
@@ -17,7 +17,7 @@ const pricingTiers = [
     },
     {
         name: 'On-demand service',
-        description: 'Perfect for dynamic websites, that require constant work',
+        description: 'Perfect for out-sourcing expert development with in-house commitment.',
         features: [
             'Full Service',
             'Expert project management',
@@ -43,13 +43,17 @@ export default function Pricing() {
                                 <Card key={index} className='border-none rounded-none bg-inherit shadow-none'>
                                     <CardHeader>
                                         <CardTitle>{tier.name}</CardTitle>
-                                        <CardDescription>{tier.description}</CardDescription>
+                                        {
+                                            tier.description && (
+                                                <CardDescription className='text-secondary'>{tier.description}</CardDescription>
+                                            )
+                                        }
                                     </CardHeader>
                                     <CardContent>
                                         <ul>
                                             {
                                                 tier.features && tier.features.map((feature, index) =>
-                                                    <li key={index} className='py-[5px]'>
+                                                    <li key={index} className='py-[5px] list-disc'>
                                                         <div className="pill">{feature}</div>
                                                     </li>
                                                 )

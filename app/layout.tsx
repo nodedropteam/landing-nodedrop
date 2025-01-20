@@ -20,8 +20,8 @@ const query = `*[_type == "siteSettings"][0]{
 }`;
 
 export const metadata: Metadata = {
-  title: "Loading...",
-  description: "Loading...",
+  title: "NodeDrop",
+  description: "The Website Builders.",
 };
 
 const options = { next: { revalidate: 30 } };

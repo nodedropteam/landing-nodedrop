@@ -20,9 +20,9 @@ export default function Footer() {
                     </div>
                 </div>
                 <footer>
-                    <div className="inner flex flex-col md:flex-row gap-5 justify-between items-center">
+                    <div className="inner flex flex-col-reverse md:flex-row gap-5 justify-between items-center">
                         <p>Built by <Link href={`/`} className='underline'>nodedrop</Link>.</p>
-                        <p className='text-sm'>© 2025 nodedrop. All rights reserved.</p>
+                        <p className='text-xs'>© 2025 nodedrop. All rights reserved.</p>
                         <nav className='space-x-5'>
                             <Link href={`https://x.com/chilumutale`} passHref target='_blank'>
                                 <Button variant={`link`}>Twitter</Button>
