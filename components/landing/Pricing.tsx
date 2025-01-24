@@ -1,46 +1,57 @@
 import React from 'react'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card'
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../ui/card'
 import { Button } from '../ui/button'
 import Link from 'next/link'
+import { Badge } from '../ui/badge'
+import { CheckCircle, CheckCircle2 } from 'lucide-react'
+import { Separator } from '../ui/separator'
 
 const pricingTiers = [
     {
-        name: 'One-time service',
-        description: 'A complete, custom website delivered to you with full ownership—no ongoing commitments.',
-        features: [
-            'Free Copywriting',
-            '1x round of revision',
-            'Custom website wireframing',
+        name: 'One-Time',
+        description: 'Perfect for when you need something amazing delivered, fast.',
+        whatYouGet: 'A high-quality product delivered quickly and effortlessly—whether it\’s a website, logo, or content.',
+        benefits: [
+            'Full ownership of the final product, no recurring costs',
+            'High-quality, tailored deliveraables that align with your brand',
+            'A straight forward process that ensures fast turnaround times',
             'Daily updates until project completion',
-            'Responsive design for mobile, tablet and laptop'
+        ],
+        steps: [
+            'Share your vision',
+            'We\'ll create it',
+            'You get a finished product that\'s 100% yours',
         ]
     },
     {
-        name: 'On-demand service',
-        description: 'Perfect for out-sourcing expert development with in-house commitment.',
-        features: [
-            'Full Service',
-            'Expert project management',
-            'On call developer/ designer',
-            'Pitch deck and branding presentation',
-            'Unlimited design and development requests',
-            'Access to our digital collection; (videos, audio, photos, etc.)',
+        name: 'On-Demand',
+        description: 'Your remote IT department, on call whenever you need it.',
+        whatYouGet: 'Unlimited access to our expertise in design, development, copywriting, and more—all for one flat monthly fee.',
+        benefits: [
+            'Effortless updates and maintenance for your digital assets',
+            'A flexible and relaiable partner for your growing business',
+            'Priority turnaround times to ensure your requests are handled quickly and efficiently',
+        ],
+        steps: [
+            'Subscribe',
+            'Request what you need',
+            'Watch us deliver, again and again',
         ]
-    }
+    },
 ]
 
 export default function Pricing() {
     return (
         <section id='pricing' className="relative">
             <div className="u-container">
-                <div className="bg-inhance bg-foreground text-background rounded-lg p-[20px] space-y-[40px]">
+                <div className="bg-white text-background rounded-lg p-[20px] space-y-[40px]">
                     <div className="stack textbox max-w-[640px]">
                         <h2 className='text-3xl sm:text-5xl font-semibold'>Essential servicing, your best investment</h2>
                     </div>
-                    <div className="row grid tablet:grid-cols-2">
+                    <div className="row grid tablet:grid-cols-2 gap-10">
                         {
                             pricingTiers && pricingTiers.map((tier, index) =>
-                                <Card key={index} className='border-none rounded-none bg-inherit shadow-none'>
+                                <Card key={index} className='shadow-none bg-foreground text-background rounded-3xl'>
                                     <CardHeader>
                                         <CardTitle>{tier.name}</CardTitle>
                                         {
@@ -49,16 +60,45 @@ export default function Pricing() {
                                             )
                                         }
                                     </CardHeader>
-                                    <CardContent>
-                                        <ul>
-                                            {
-                                                tier.features && tier.features.map((feature, index) =>
-                                                    <li key={index} className='py-[5px] list-disc'>
-                                                        <div className="pill">{feature}</div>
-                                                    </li>
-                                                )
-                                            }
-                                        </ul>
+                                    <Separator />
+                                    <CardContent className='space-y-10 pt-5'>
+                                        {
+                                            tier.whatYouGet && (
+                                                <div className="stack space-y-2">
+                                                    <Badge variant={`secondary`}>What you get</Badge>
+                                                    <p>{tier.whatYouGet}</p>
+                                                </div>
+                                            )
+                                        }
+                                        <Separator />
+                                        <div className='stack space-y-2'>
+                                            <Badge variant={`secondary`}>Benefits</Badge>
+                                            <ul>
+                                                {
+                                                    tier.benefits && tier.benefits.map((feature, index) =>
+                                                        <li key={index} className='py-[5px] flex items-start gap-2'>
+                                                            <CheckCircle2 className='size-5 shrink-0' />
+                                                            <div className="pill">{feature}</div>
+                                                        </li>
+                                                    )
+                                                }
+                                            </ul>
+                                        </div>
+                                        <Separator />
+                                        <CardFooter>
+                                            <div className='stack space-y-2'>
+                                                <Badge variant={`secondary`}>How it works</Badge>
+                                                <ul>
+                                                    {
+                                                        tier.steps && tier.steps.map((step, index) =>
+                                                            <li key={index} className='py-[5px]'>
+                                                                <div className="pill">{step}</div>
+                                                            </li>
+                                                        )
+                                                    }
+                                                </ul>
+                                            </div>
+                                        </CardFooter>
                                     </CardContent>
                                 </Card>
                             )
@@ -68,7 +108,7 @@ export default function Pricing() {
                         <Link href={process.env.DISCOVERY_CALL_LINK as string || '#'} passHref target='_blank'>
                             <Button>Secure your Feb Spot</Button>
                         </Link>
-                        <Link href={process.env.PRICING_CHART as string || '#'} passHref>
+                        <Link href={process.env.PRICING_CHART as string || '#'} passHref target='_blank'>
                             <Button variant={`secondary`}>or, See pricing chart</Button>
                         </Link>
                     </div>
