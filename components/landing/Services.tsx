@@ -7,22 +7,22 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
 const services = [
     {
         title: 'Design',
-        description: 'Tailored designs that reflect your brand identity and solve specific business challenges.',
+        description: 'Eye-catching designs for websites, pitch decks, posters, and more. We blend creativity with strategy to craft visuals that make your brand memorable and engaging',
         image: '/media__44.jpg',
     },
     {
         title: 'Development',
-        description: 'We build custom solutions, on any platform specific to your business needs.',
+        description: 'Custom websites, mobile apps, and desktop solutions built to meet your needs. From sleek business sites to complex applications, we deliver robust, scalable, and user-friendly experiences.',
         image: '/media__42.jpg',
     },
     {
         title: 'Brand identity & Concept design',
-        description: 'We help you stand out and reach your audience with your message, and personality.',
+        description: 'Logos, branding, and messaging that tell your story. We help you create a cohesive identity that connects with your audience and leaves a lasting impression.',
         image: '',
     },
     {
         title: 'Maintenance & Hosting',
-        description: 'We build software that is fast, secure, and scalable.',
+        description: 'From hosting setup to ongoing website maintenance, we’ve got you covered. Ensure your online presence stays fast, secure, and always up to date.',
         image: '',
     }
 ]
@@ -43,7 +43,7 @@ export default function Services() {
                                     services.map((card: any, index: number) => (
                                         <Card key={index}
                                             className={`
-                                                bento-card bg-black text-secondary-foreground overflow-hidden
+                                                bento-card bg-black text-secondary-foreground overflow-hidden rounded-2xl
                                                 ${index === 0 ? 'min-h-[320px]' : ''}
                                                 ${index === 1 ? 'min-h-[400px]' : ''}
                                                 ${index === 2 ? '' : ''}
@@ -60,19 +60,7 @@ export default function Services() {
                                                     )
                                                 }
                                             </div>
-                                            <CardHeader className='relative z-0'>
-                                                {/* {
-                                                    card.icon && (
-                                                        <div className="card-icon">
-                                                            <img
-                                                                src={urlForImage(card.icon)?.url()}
-                                                                alt={card.title}
-                                                                className="laptop:size-12 size-6 object-fill"
-                                                            />
-                                                        </div>
-                                                    )
-                                                } */}
-
+                                            <CardHeader className='relative z-0 max-w-[400px]'>
                                                 {
                                                     card.title && (
                                                         <CardTitle
