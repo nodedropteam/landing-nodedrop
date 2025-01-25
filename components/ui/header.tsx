@@ -21,7 +21,7 @@ const navItems: Array<{ title: string, href: string }> = [
     },
     {
         title: 'Pricing',
-        href: '/#about'
+        href: '/#pricing'
     },
     {
         title: 'Work',
