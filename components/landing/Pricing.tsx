@@ -85,21 +85,21 @@ export default function Pricing() {
                                             </ul>
                                         </div>
                                         <Separator />
-                                        <CardFooter>
-                                            <div className='stack space-y-2'>
-                                                <Badge variant={`secondary`}>How it works</Badge>
-                                                <ul>
-                                                    {
-                                                        tier.steps && tier.steps.map((step, index) =>
-                                                            <li key={index} className='py-[5px]'>
-                                                                <div className="pill">{step}</div>
-                                                            </li>
-                                                        )
-                                                    }
-                                                </ul>
-                                            </div>
-                                        </CardFooter>
                                     </CardContent>
+                                    <CardFooter>
+                                        <div className='stack space-y-2'>
+                                            <Badge variant={`secondary`}>How it works</Badge>
+                                            <ul>
+                                                {
+                                                    tier.steps && tier.steps.map((step, index) =>
+                                                        <li key={index} className='py-[5px]'>
+                                                            <div className="pill">{step}</div>
+                                                        </li>
+                                                    )
+                                                }
+                                            </ul>
+                                        </div>
+                                    </CardFooter>
                                 </Card>
                             )
                         }
