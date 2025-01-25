@@ -24,7 +24,7 @@ export default function Portfolio() {
                 <div className="grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 gap-10">
                     {
                         posts && posts.map((post, index) => (
-                            <Card key={index} className="relative overflow-hidden h-[300px] outline outline-accent max-w-[400px]">
+                            <Card key={index} className="relative overflow-hidden h-[300px] max-w-[400px]">
                                 <Image
                                     src={post.image}
                                     alt={post.title}
