@@ -1,55 +1,30 @@
 import type { Metadata } from "next";
-import { Urbanist, Montserrat } from "next/font/google";
+import { Inter, Urbanist } from "next/font/google";
+import SmoothScrollProvider from "@/components/smooth-scroll";
 import "./globals.css";
-import { client } from "@/sanity/client";
-import { type SanityDocument } from "next-sanity";
-
-const fontHeaderSans = Urbanist({
-  variable: "--font-header-sans",
-  subsets: ["latin"],
-});
-
-const fontBodySans = Montserrat({
-  variable: "--font-body-sans",
-  subsets: ["latin"],
-});
-
-const query = `*[_type == "siteSettings"][0]{
-  ..., 
-  "ogImage": image.asset->url 
-}`;
 
 export const metadata: Metadata = {
-  title: "NodeDrop",
-  description: "The Website Builders.",
+  title: "NodeDrop — Transform your online presence",
+  description: "Built with NextJS, by the NodeDrop team.",
 };
 
-const options = { next: { revalidate: 30 } };
+const fontInter = Inter({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700", "800", "900"] });
+const fontUrbanist = Urbanist({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700", "800", "900"], variable: '--font-urbanist' });
 
 export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const siteSettings = await client.fetch<SanityDocument>(query, {}, options);
-
-  if (siteSettings) {
-    metadata.title = siteSettings.siteTitle;
-    metadata.description = siteSettings.siteDescription;
-    // Add other metadata fields here
-    // metadata.openGraph = {
-    //   title: siteSettings.title,
-    //   description: siteSettings.description,
-    //   images: [{ url: siteSettings.ogImage }],
-    // }; 
-  }
   return (
-    <html lang="en">
-      <body
-        className={`${fontBodySans.variable} ${fontHeaderSans.variable} antialiased`}
-      >
-        <div id="main" className="smooth-scroll">{children}</div>
-      </body>
-    </html>
+    <SmoothScrollProvider>
+      <html lang="en">
+        <body
+          className={`${fontInter.className} ${fontUrbanist.variable} antialiased`}
+        >
+          <div id="main" className="smooth-scroll w-full content-grid">{children}</div>
+        </body>
+      </html>
+    </SmoothScrollProvider>
   );
 }

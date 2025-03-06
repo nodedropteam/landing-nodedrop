@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "cdn.sanity.io",
       },
-    ]
+    ],
   },
   // webpack: (config, { isServer }) => {
   //   if (!isServer) {
