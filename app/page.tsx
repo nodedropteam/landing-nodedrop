@@ -178,7 +178,7 @@ export default function page() {
                                 <FadeIn whileInView={true} delay={0.6}>
                                     <h2>4.Launch</h2>
                                     <p>
-                                        We go live, handing your solution to. Should you
+                                        We go live, handing the finished product to you. Should you
                                         choose, we offer maintenance and support.
                                     </p>
                                 </FadeIn>
