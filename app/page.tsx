@@ -119,17 +119,18 @@ export default function page() {
             </section>
             {/* about */}
 
-            <section id='case-study-1' className="full full-width-split-screen items-end py-40">
+            {/* <section id='case-study-1' className="full full-width-split-screen items-end py-40">
                 <div className="img-box bg-secondary h-[600px]">
                 </div>
                 <div className="content pt-8 lg:pl-4">
                     <h3 className='font-medium'>Banking and Commerce</h3>
                     <Button size={`lg`} className='rounded-full'>See live</Button>
                 </div>
-            </section>
+            </section> */}
             {/* case study */}
 
             <section id="how-it-works" className='py-40'>
+                <h2 className='h6'>How it works</h2>
                 <div className="inner flex flex-wrap gap-8">
                     <div className="stack w-full md:w-[35%] grow">
                         <FadeIn whileInView={true}>
@@ -227,7 +228,7 @@ export default function page() {
             <section id='what-we-offer' className='py-24'>
                 <div className="inner space-y-8">
                     <div className="stack">
-                        <h1>FAQ</h1>
+                        <h1>Got Questions?</h1>
                     </div>
                     <Accordion collapsible type='single' className='flex flex-col gap-8'>
                         {
@@ -242,9 +243,9 @@ export default function page() {
                                         </Button>
                                         <div className='grow'>
                                             <AccordionTrigger
-                                                className='bg-secondary py-1 px-4 rounded-xl border shadow h6'>
+                                                className='bg-secondary py-3 px-4 rounded-xl border shadow !h5'>
                                                 {q.question}</AccordionTrigger>
-                                            <AccordionContent>{q.answer}</AccordionContent>
+                                            <AccordionContent className='text-lg'>{q.answer}</AccordionContent>
                                         </div>
                                     </AccordionItem>
                                 )
