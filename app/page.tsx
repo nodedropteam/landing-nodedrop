@@ -242,9 +242,9 @@ export default function page() {
                                             {index + 1}
                                         </Button>
                                         <div className='grow'>
-                                            <AccordionTrigger
-                                                className='bg-secondary py-3 px-4 rounded-xl border shadow !h5'>
-                                                {q.question}</AccordionTrigger>
+                                            <AccordionTrigger>
+                                                <p className='h5'>{q.question}</p>
+                                            </AccordionTrigger>
                                             <AccordionContent className='text-lg'>{q.answer}</AccordionContent>
                                         </div>
                                     </AccordionItem>
