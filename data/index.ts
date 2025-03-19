@@ -39,5 +39,6 @@ export const whatWeOffer = [
 export const showcase = [
     "/images/UrbanEdge Realty.png",
     "/images/VeroWealth Management.png",
-    "/images/Grandiose Steakhouse.png"
+    "/images/Grandiose Steakhouse.png",
+    "/images/home_and_energy.png"
 ]

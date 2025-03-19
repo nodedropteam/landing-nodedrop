@@ -211,7 +211,7 @@ export default function page() {
                                             </div>
                                             <div className="card-content py-4 px-4 pt-8">
                                                 <div className='max-w-lg'>
-                                                    <h4 className='!mb-1 h6'>{item.title}</h4>
+                                                    <h4 className='!mb-1 h5'>{item.title}</h4>
                                                     <p className='text-muted-foreground'>{item.description}</p>
                                                 </div>
                                             </div>
