@@ -4,8 +4,8 @@ import SmoothScrollProvider from "@/components/smooth-scroll";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "NodeDrop — Transform your online presence",
-  description: "Built with NextJS, by the NodeDrop team.",
+  title: "Freelance website design and development for businesses",
+  description: "24/7, 365 Support for development and design of you businesses software.",
 };
 
 const fontInter = Inter({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700", "800", "900"] });
