@@ -1,7 +1,7 @@
 "use client"
 
 import Link from 'next/link'
-import React from 'react'
+import React, {  useEffect } from 'react'
 import { ArrowDownLeft } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { FileInput } from 'lucide-react'
@@ -17,10 +17,24 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion"
+import AutoScroll from "embla-carousel-auto-scroll"
 
 
 export default function page() {
-    const [carousel] = useEmblaCarousel();
+    const [carousel, emblaApi] = useEmblaCarousel({ loop: true }, [
+        AutoScroll({ speed: 1, startDelay: 1000, stopOnInteraction: false })
+    ])
+
+    useEffect(() => {
+        if (!emblaApi) return;
+
+        const autoScroll = emblaApi.plugins().autoScroll;
+        if (autoScroll) autoScroll.play();
+
+        return () => {
+            if (autoScroll) autoScroll.stop();
+        }
+    }, [emblaApi]);
 
     return (
         <>
