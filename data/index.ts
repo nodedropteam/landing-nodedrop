@@ -41,5 +41,6 @@ export const showcase = [
     "/images/VeroWealth Management.png",
     "/images/Grandiose Steakhouse.png",
     "/images/home_and_energy.png",
-    "/images/dance_studio.png"
+    "/images/dance_studio.png",
+    "/images/museum_studio.png"
 ]
