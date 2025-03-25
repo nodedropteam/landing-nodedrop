@@ -63,8 +63,8 @@ export default function page() {
                                         Website design and development that produces results for your business.
                                     </h1>
                                     <p className='text-muted-foreground'>
-                                        We create and develop innovative software solutions that help businesses scale
-                                        and become productive acheiveing growth and business goals.
+                                    We create and develop innovative software solutions 
+                                    that help businesses scale and become productive, achieving growth and business goals.
                                     </p>
                                 </FadeIn>
                             </div>
