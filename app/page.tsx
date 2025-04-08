@@ -1,7 +1,7 @@
 "use client"
 
 import Link from 'next/link'
-import React, {  useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { ArrowDownLeft } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { FileInput } from 'lucide-react'
@@ -60,11 +60,12 @@ export default function page() {
                             <div className="stack max-w-xl space-y-3">
                                 <FadeIn>
                                     <h1 className='h4 font-semibold'>
-                                        Website design and development that produces results for your business.
+                                        We help startups and service businesses grow with
+                                        lightning-fast, conversion-focused websites.
                                     </h1>
                                     <p className='text-muted-foreground'>
-                                    We create and develop innovative software solutions 
-                                    that help businesses scale and become productive, achieving growth and business goals.
+                                        From branding to launch, we build conversion-focused
+                                        websites that help small businesses grow faster — without the agency price tag.
                                     </p>
                                 </FadeIn>
                             </div>
@@ -252,9 +253,9 @@ export default function page() {
                                         value={q.question}
                                         key={index}
                                         className='w-full flex items-start gap-2 relative'>
-                                        <Button className='rounded-full shrink-0 sm:mt-2' size={`icon`}>
+                                        {/* <Button className='rounded-full shrink-0 sm:mt-2' size={`icon`}>
                                             {index + 1}
-                                        </Button>
+                                        </Button> */}
                                         <div className='grow'>
                                             <AccordionTrigger>
                                                 <p className='h5'>{q.question}</p>
