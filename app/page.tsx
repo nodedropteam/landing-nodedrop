@@ -205,27 +205,32 @@ export default function page() {
             {/* how it works */}
 
             <section id='what-we-offer' className='py-24'>
-                <div className="inner space-y-8">
-                    <div className="stack">
+                <div className="inner space-y-10">
+                    <div className="stack text-center sapce-y-4">
                         <h1 className='drop-shadow-lg'>Set yourself apart</h1>
+                        <p className='text-lg'>
+                            Stand out with a website that drives results and growth.
+                        </p>
                     </div>
-                    <div className='flex flex-wrap gap-12'>
+                    <div className='flex flex-wrap gap-12 md:gap-24'>
                         {
                             whatWeOffer.map((item, index) => (
                                 <div key={index} className='w-full md:w-[35%] grow h-full'>
                                     <FadeIn whileInView={true} delay={0}>
-                                        <div className="card bg-card border rounded-2xl shadow">
-                                            <div className="card-header p-2">
-                                                <div className='w-auto h-auto custom-inner-shadow'>
+                                        <div className="card bg-card rounded-2xl">
+                                            <div className="card-header p-1">
+                                                <div className='relative w-full h-52  rounded-tl-2xl rounded-tr-2xl'>
                                                     <Image
                                                         src={item.illustration}
-                                                        width={450}
-                                                        height={150}
+                                                        // width={450}
+                                                        // height={150}
+                                                        fill
+                                                        className='mr-auto'
                                                         alt={item.title} />
                                                 </div>
                                             </div>
                                             <div className="card-content py-4 px-4 pt-8">
-                                                <div className='max-w-lg'>
+                                                <div className='max-w-[50ch] text-center mx-auto space-y-4'>
                                                     <h4 className='!mb-1 h5'>{item.title}</h4>
                                                     <p className='text-muted-foreground'>{item.description}</p>
                                                 </div>
@@ -245,7 +250,7 @@ export default function page() {
                     <div className="stack">
                         <h1>Got Questions?</h1>
                     </div>
-                    <Accordion collapsible type='single' className='flex flex-col gap-8'>
+                    <Accordion collapsible type='single' className='flex flex-col gap-8 max-w-[60ch]'>
                         {
                             faq.map((q: any, index: any) => {
                                 return (

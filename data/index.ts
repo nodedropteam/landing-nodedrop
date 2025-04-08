@@ -15,22 +15,22 @@ export const faq = [
 
 export const whatWeOffer = [
     {
-        illustration: "/images/strategic-design.svg",
+        illustration: "/strategic_design.svg",
         title: "Strategic Design",
         description: "Every project is created with a focus on user experience, brand indentity, and conversion optimization."
     },
     {
-        illustration: "/images/effeciency.svg",
+        illustration: "/delivered_on_schedule.svg",
         title: "Delivery on Schedule",
         description: "Fast project turnaround times ensure businesses can launch or upgrade their digital presence quickly."
     },
     {
-        illustration: "/images/automation-and-productivity.svg",
+        illustration: "/Automation.svg",
         title: "Automation & Productivity",
         description: "Our solutions go beyond websites, incorporating business tools that streamline operations and improve efficiency."
     },
     {
-        illustration: "/images/scalability-and-flexibility.svg",
+        illustration: "/scalability.svg",
         title: "Scalability & Flexibility",
         description: "Whether you need a simple site or a complex digital solution, we tailor our services to meet evolving business needs."
     }
