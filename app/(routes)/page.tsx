@@ -1,18 +1,14 @@
 import Image from 'next/image'
 import FadeIn from '@/components/animations/fadein'
-import HeroWelcome from '@/app/templates/hero-welcome'
-import Header from '@/app/templates/header'
-import Faq from '@/app/templates/faq'
-import { notebook_whatWeOffer } from '@/app/templates/notebooks/what-we-offer'
-import { notebook_ourProcess } from '@/app/templates/notebooks/our-process'
-import Footer from '../templates/footer'
+import HeroWelcome from '@/app/_templates/hero-welcome'
+import Header from '@/app/_templates/header'
+import Faq from '@/app/_templates/faq'
+import { notebook_whatWeOffer } from '@/app/_templates/notebooks/what-we-offer'
+import { notebook_ourProcess } from '@/app/_templates/notebooks/our-process'
 
 export default function page() {
     return (
         <>
-            <Header />
-            {/* header */}
-
             <HeroWelcome />
             {/* hero */}
 
@@ -116,7 +112,6 @@ export default function page() {
 
             <Faq />
             {/* question and answer */}
-            <Footer />
         </>
     )
 }

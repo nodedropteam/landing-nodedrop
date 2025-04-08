@@ -1,10 +1,11 @@
 import FadeDown from '@/components/animations/fadedown'
+import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 
 export default function Header() {
     return (
         <header className='full content-grid py-8 w-full'>
-            <div className="inner">
+            <div className="inner flex items-center justify-between">
                 <FadeDown>
                     <div className="logo">
                         <Link
@@ -14,6 +15,11 @@ export default function Header() {
                         </Link>
                     </div>
                 </FadeDown>
+                <div>
+                    <Link href={`/start-here`} className='block'>
+                        <Button size={`lg`} >Start here</Button>
+                    </Link>
+                </div>
             </div>
         </header>
     )

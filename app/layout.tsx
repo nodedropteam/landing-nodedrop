@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Inter, Urbanist } from "next/font/google";
 import SmoothScrollProvider from "@/components/smooth-scroll";
-import "./styles/globals.css";
+import "./_styles/globals.css";
+import Header from "./_templates/header";
+import Footer from "./_templates/footer";
 
 export const metadata: Metadata = {
     title: "Freelance website design and development for businesses",
@@ -22,7 +24,11 @@ export default async function RootLayout({
                 <body
                     className={`${fontInter.className} ${fontUrbanist.variable} antialiased`}
                 >
-                    <div id="main" className="smooth-scroll w-full content-grid">{children}</div>
+                    <div id="main" className="smooth-scroll w-full content-grid">
+                        <Header />
+                        {children}
+                        <Footer />
+                    </div>
                 </body>
             </html>
         </SmoothScrollProvider>
