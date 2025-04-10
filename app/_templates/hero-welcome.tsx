@@ -39,7 +39,7 @@ export default function HeroWelcome() {
                                 <Button size={`icon`} className='size-14 rounded-full group-hover:-rotate-12 transition-transform duration-300' >
                                     <ArrowDownLeft className='!size-6' />
                                 </Button>
-                                <Link href={`/contact`} className='text-sm font-semibold underline underline-offset-4'>Check out our projects</Link>
+                                <Link href={`#`} className='text-sm font-semibold underline underline-offset-4'>Check out our projects</Link>
                             </div>
                         </FadeIn>
                     </div>
