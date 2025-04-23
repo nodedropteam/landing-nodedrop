@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Inter, Urbanist } from "next/font/google";
 import SmoothScrollProvider from "@/components/smooth-scroll";
-import "./_styles/globals.css";
 import Header from "./_templates/header";
 import Footer from "./_templates/footer";
+
+import "@/css/globals.css";
 
 export const metadata: Metadata = {
     title: "Freelance website design and development for businesses",
@@ -27,7 +28,7 @@ export default async function RootLayout({
                     <div id="main" className="smooth-scroll w-full content-grid">
                         <Header />
                         {children}
-                        <Footer />
+                        {/* <Footer /> */}
                     </div>
                 </body>
             </html>

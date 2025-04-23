@@ -23,7 +23,7 @@ type FormInputs = {
 }
 
 const goalOptions = [
-    "Gnenerate new leads",
+    "Generate new leads",
     "Provide information about services",
     "Build brand creadibility",
     "Educate and inform an audience",
@@ -100,7 +100,7 @@ export default function StartHereQuestionnaire() {
 
 
             <div className="space-y-2">
-                <Label className="font-bold text-[length:var(--text-0)]">What is your project goal?</Label>
+                <Label className="font-bold text-[length:var(--text-0)]">What is the project goal?</Label>
                 <div className="grid gap-2 pt-2">
                     {goalOptions.map(goal => (
                         <div key={goal} className="flex items-center space-x-2">
