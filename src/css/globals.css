@@ -1,3 +1,6 @@
+@import url("./button.css");
+@import url("./layout.css");
+
 @import "tailwindcss";
 
 @theme {
@@ -5,32 +8,11 @@
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-.content {
-  --gap: clamp(1rem, 6vw, 3rem);
-  --full: minmax(var(--gap), 1fr);
-  --content: min(50ch, 100% - var(--gap) * 2);
-  --popout: minmax(0, 2rem);
-  --feature: minmax(0, 5rem);
+@layer components {
+  ::selection, ::-moz-selection {
+    @apply bg-pink-500 text-black;
+  }
 
-  display: grid;
-  grid-template-columns:
-    [full-start] var(--full) [feature-start] var(--feature) [popout-start] var(--popout) [content-start] var(--content) [content-end] var(--popout) [popout-end] var(--feature) [feature-end] var(--full) [full-end];
-}
-
-.content>* {
-  grid-column: content;
-}
-
-.popout {
-  grid-column: popout;
-}
-
-.feature {
-  grid-column: feature;
-}
-
-.full {
-  grid-column: full;
 }
 
 h1,
@@ -40,7 +22,6 @@ h4,
 h5,
 h6 {
   text-wrap: balance;
-  margin-bottom: 0.5em;
   line-height: 1em;
 }
 
