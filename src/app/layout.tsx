@@ -1,7 +1,7 @@
 import "~/css/globals.css";
 
 import { type Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Geist, Montserrat } from "next/font/google";
 
 export const metadata: Metadata = {
     title: "Software Solutions for Business Problems",
@@ -9,9 +9,9 @@ export const metadata: Metadata = {
     icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
-const geist = Geist({
+const geist = Montserrat({
     subsets: ["latin"],
-    variable: "--font-geist-sans",
+    variable: "--font-sans",
 });
 
 export default function RootLayout({
@@ -20,7 +20,7 @@ export default function RootLayout({
     return (
         <html lang="en" className={`${geist.variable}`}>
             <body>
-                <main className="content">
+                <main>
                     {children}
                 </main>
             </body>
