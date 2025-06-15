@@ -21,7 +21,7 @@ export default function Hero() {
                 </div>
 
                 <div className="cta-row flex flex-wrap justify-center gap-4 mx-auto w-fit">
-                    <Link className='block' href={process.env.CALENDLY_LINK as string || "/not-found"} target='_blank'>
+<Link className='block' href={process.env.CALENDLY_LINK ?? "/not-found"} target='_blank'>
                         <Button size={`lg`}>
                             Schedule Project Audit
                         </Button>

@@ -1,35 +1,35 @@
 import React from 'react'
 import Wrapper from '../elements/Wrapper'
 import { Button } from '../ui/button';
-import { Check, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 
-const services = [
-    { name: "Websites" },
-    { name: "Mobile Apps" },
-    { name: "Logos & branding" },
-    { name: "Design systems" },
-    { name: "SAAS" },
-    { name: "Wireframes" },
-    { name: "Stationary" },
-    { name: "Pitch decks" },
-    { name: "Slide decks" },
-    { name: "Direct mail" },
-    { name: "Infographics" },
-    { name: "Brochures" },
-    { name: "Signage" },
-    { name: "Brand guides" },
-    { name: "Social media graphics" },
-    { name: "Billboards" },
-    { name: "Trade show banners" },
-    { name: "Email graphics" },
-    { name: "Resumes" },
-    { name: "Business cards" },
-    { name: "Packaging" },
-    { name: "Blog graphics" },
-    { name: "Digital ads" },
-    { name: "Icons" }
-];
+// const services = [
+//     { name: "Websites" },
+//     { name: "Mobile Apps" },
+//     { name: "Logos & branding" },
+//     { name: "Design systems" },
+//     { name: "SAAS" },
+//     { name: "Wireframes" },
+//     { name: "Stationary" },
+//     { name: "Pitch decks" },
+//     { name: "Slide decks" },
+//     { name: "Direct mail" },
+//     { name: "Infographics" },
+//     { name: "Brochures" },
+//     { name: "Signage" },
+//     { name: "Brand guides" },
+//     { name: "Social media graphics" },
+//     { name: "Billboards" },
+//     { name: "Trade show banners" },
+//     { name: "Email graphics" },
+//     { name: "Resumes" },
+//     { name: "Business cards" },
+//     { name: "Packaging" },
+//     { name: "Blog graphics" },
+//     { name: "Digital ads" },
+//     { name: "Icons" }
+// ];
 
 const featured = [
     {name: "Design Systems"},

@@ -32,8 +32,8 @@ export default function Process() {
 
         <div className="card-grid flex flex-wrap gap-4">
           {processSteps.map((step, index) => (
-            <div className='w-full sm:w-[35%] lg:w-[20%] grow'>
-            <div className="card" key={index}>
+            <div key={index} className='w-full sm:w-[35%] lg:w-[20%] grow'>
+            <div className="card">
               <div className="card-header pb-3">
                 <Button size={`icon`} variant={`default`} className='mb-8 rounded-sm'>
                   {""}{index + 1}

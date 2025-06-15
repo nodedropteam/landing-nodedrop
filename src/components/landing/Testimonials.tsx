@@ -22,7 +22,7 @@ export default function Testimonials() {
             <Wrapper className='py-24'>
                 <div className='p-12 rounded-2xl bg-accent border text-accent-foreground text-center mb-16 shadow-xl'>
                     <h2 className='text-4xl font-medium text-center mb-8 max-w-[640px] mx-auto'>
-                        "Aubergine Studio are a rare breed of designers and developers they understands business needs."
+                        {"\"Aubergine Studio are a rare breed of designers and developers they understands business needs.\""}
                     </h2>
 
                     <p className='uppercase text-lg italic font-medium text-muted-foreground'>Gerard Depardieu</p>

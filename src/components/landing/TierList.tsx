@@ -57,7 +57,7 @@ export default function ServiceTierList() {
                         Service package for any budget.
                     </h2>
                     <p className=''>
-                        Pick the package that's right for you.
+                        {"Pick the package that's right for you."}
                     </p>
                 </div>
                 <div className="card-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

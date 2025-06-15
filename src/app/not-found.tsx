@@ -14,7 +14,7 @@ export default function NotFound() {
                             <Image src={`/NODEDROP.svg`} width={100} height={100} alt='nodedrop logo' />
                         </div>
                         <h1 className='text-5xl md:text-7xl lg:text-8xl text-center font-bold'>
-                            Sorry, that page doesn't exist.
+                            {"Sorry, that page doesn't exist."}
                         </h1>
                         <p className='text-xl sm:text-2xl text-center text-muted-foreground'>
                         </p>
