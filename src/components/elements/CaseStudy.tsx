@@ -27,7 +27,7 @@ export default function CaseStudy() {
                     </h2>
                 </div>
                 <div className="img-box relative w-full h-[200px] lg:h-[700px] mb-4">
-                    <Image src={`/www.showcase.com.svg`} alt='' fill className='lg:object-cover object-top border-[3px] rounded-[32px] shadow-xl' />
+                    <Image src={`/emmahlub.co.za.png`} alt='' fill className='lg:object-cover object-top border-[3px] border-[#1e1e1e] shadow-xl' />
                 </div>
                 <div className='p-8 rounded-2xl bg-accent border text-accent-foreground text-center mb-16'>
                     <p className='uppercase text-lg italic font-medium text-muted-foreground'>Emmahlubi Inc.</p>
