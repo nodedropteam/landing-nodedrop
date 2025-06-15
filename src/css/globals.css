@@ -43,6 +43,12 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+body {
+  background-image: url("/bg_pattern.jpg");
+  background-size: 400px 400px;
+  background-repeat: repeat;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -55,4 +61,8 @@
 
 h1,h2,h3,h4 {
   text-wrap: balance;
+}
+
+p,li,span {
+  text-wrap: pretty;
 }

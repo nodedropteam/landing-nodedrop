@@ -59,7 +59,7 @@ export default function Services() {
                 </div> */}
                 <div className='border-t'>
                     {featured.map((service, index) => (
-                        <div className='border-b py-3 w-full flex justify-between items-center'>
+                        <div key={index} className='border-b py-3 w-full flex justify-between items-center'>
                             <p className='font-medium'>{service.name}</p>
                             <ArrowRight />
                         </div>

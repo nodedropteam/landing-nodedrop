@@ -10,7 +10,7 @@ import Projects from '~/components/landing/Projects'
 import ServiceIndustry from '~/components/landing/ServiceIndustry'
 import Services from '~/components/landing/Services'
 import Testimonials from '~/components/landing/Testimonials'
-import TierList from '~/components/landing/TierList'
+import ServiceTierList from '~/components/landing/TierList'
 
 export default function HomePage() {
     return (
@@ -22,7 +22,7 @@ export default function HomePage() {
                 <ServiceIndustry />
                 <CaseStudy />
                 {/* <Testimonials /> */}
-                <TierList />
+                <ServiceTierList />
                 <Services />
                 {/* <Projects /> */}
                 {/* <Benefits /> */}

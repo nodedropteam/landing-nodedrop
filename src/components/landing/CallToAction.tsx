@@ -1,6 +1,7 @@
 import React from 'react'
 import Wrapper from '../elements/Wrapper'
 import { Button } from '../ui/button'
+import Link from 'next/link'
 
 export default function CallToAction() {
   return (
@@ -12,13 +13,17 @@ export default function CallToAction() {
           </h2>
         </div>
 
-        <div className="cta-row flex flex-wrap gap-4 mx-auto w-fit">
-          <Button size={`lg`}>
-            Schedule Project Audit
-          </Button>
-          <Button size={`lg`} variant={`outline`}>
-            See Our work
-          </Button>
+        <div className="cta-row flex flex-wrap justify-center gap-4 mx-auto w-fit">
+          <Link className='block' href={process.env.CALENDLY_LINK as string || "/not-found"} target='_blank'>
+            <Button size={`lg`}>
+              Schedule Project Audit
+            </Button>
+          </Link>
+          <Link className='block' href="/projects">
+            <Button size={`lg`} variant={`outline`}>
+              See Our work
+            </Button>
+          </Link>
         </div>
       </Wrapper>
     </section>

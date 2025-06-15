@@ -34,7 +34,7 @@ export default function Header() {
                     <Image src={`/NODEDROP.svg`} width={80} height={100} alt='nodedrop logo' />
                 </div> */}
 
-                <div className="nav-bar">
+                <div className="nav-bar hidden sm:block">
                     <div className="menu">
                         <ul className='flex gap-6 items-center'>
                             {mainMenu.map((item, index) => (

@@ -34,7 +34,7 @@ export default function ServiceIndustry() {
                 <div className="card-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full md:w-4/6">
                     {processSteps.map((step, index) => (
                         <div key={index} className='w-full'>
-                            <div className="card p-2 border rounded-md h-full" key={index}>
+                            <div className="card bg-card p-2 border rounded-md h-full" key={index}>
                                 <div className="card-header pb-3">
                                     <Button size={`icon`} variant={`default`} className='mb-8 rounded-sm'>
                                         {""}{index + 1}
