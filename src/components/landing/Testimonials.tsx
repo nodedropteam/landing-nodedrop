@@ -30,8 +30,8 @@ export default function Testimonials() {
 
                 <div className="card-grid flex flex-wrap gap-8">
                     {features.map((feature, index) => (
-                        <div className='w-full sm:w-[45%] md:w-[25%] grow'>
-                        <div className="card" key={index}>
+                        <div key={index} className='w-full sm:w-[45%] md:w-[25%] grow'>
+                        <div className="card">
                             <div className="card-header mb-4">
                                 <h3 className="card-title text-lg font-semibold text-center">{feature.title}</h3>
                             </div>

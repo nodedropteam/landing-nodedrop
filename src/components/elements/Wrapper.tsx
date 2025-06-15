@@ -4,9 +4,10 @@ interface Props {
     children: React.ReactNode;
     className?: string;
     variant?: string;
+    scrollName?: string;
 }
 
-export default function Wrapper({ children, className }: Props) {
+export default function Wrapper({ children, className, scrollName }: Props) {
     const variants = {
         "base": "",
         "wide": "feature",
@@ -16,7 +17,7 @@ export default function Wrapper({ children, className }: Props) {
     const classString = `${className} ${variants}`.trim()
 
     return (
-        <div className={`mx-auto relative ${classString}`}>
+        <div className={`mx-auto relative ${classString}`} id={scrollName}>
             {children}
         </div>
     )

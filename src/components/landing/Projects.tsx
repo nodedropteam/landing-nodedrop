@@ -8,8 +8,8 @@ export default function Projects() {
     <section>
       <Wrapper className='py-24 space-y-24'>
         <div className="copy mb-8">
-          <h2 className='font-medium text-3xl max-w-[480px] mb-16'>
-            Non award winning designs, and simply just that and that.
+          <h2 className='font-bold text-2xl md:text-4xl max-w-[480px] mb-16'>
+            Check out some free resources.
           </h2>
         </div>
 
