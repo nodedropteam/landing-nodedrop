@@ -23,8 +23,11 @@ export default function CaseStudy() {
             <Wrapper className='py-24' scrollName='projects'>
                 <div className="copy">
                     <h2 className='text-4xl font-medium text-center mb-8 max-w-[640px] mx-auto'>
-                        Our happy clients
+                        Work our clients get
                     </h2>
+                    <p className='text-xl sm:text-2xl text-center text-muted-foreground'>
+                        and you will too...
+                    </p>
                 </div>
                 <div className="img-box relative w-full h-[200px] lg:h-[700px] mb-4">
                     <Image src={`/emmahlub.co.za.png`} alt='' fill className='lg:object-cover object-top border-[3px] border-[#1e1e1e] shadow-xl' />
