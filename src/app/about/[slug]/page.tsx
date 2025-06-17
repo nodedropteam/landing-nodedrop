@@ -47,7 +47,7 @@ export default async function Page({
                 <Wrapper variant='hero'>
                     <ProfileCard headshot={doc.headshot} title={doc.title} role={doc.role} social={doc.social} />
                     <article className="w-full max-w-[60ch] py-8">
-                        <div className="[&>*]:mb-3 [&>*:last-child]:mb-0 contentlayer-md" dangerouslySetInnerHTML={{ __html: doc.body.html }} />
+                        <div className="prose [&>*]:mb-3 [&>*:last-child]:mb-0 contentlayer-md" dangerouslySetInnerHTML={{ __html: doc.body.html }} />
                     </article>
                 </Wrapper>
             </div>

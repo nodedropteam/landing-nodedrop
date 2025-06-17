@@ -66,3 +66,63 @@ h1,h2,h3,h4 {
 p,li,span {
   text-wrap: pretty;
 }
+
+/* contentlayer */
+/* styles/contentlayer-md.css */
+
+.contentlayer-md {
+  @apply text-base text-gray-800 leading-relaxed space-y-4;
+}
+
+.contentlayer-md h1 {
+  @apply text-3xl font-bold mt-6 mb-2;
+}
+
+.contentlayer-md h2 {
+  @apply text-2xl font-semibold mt-5 mb-2;
+}
+
+.contentlayer-md h3 {
+  @apply text-xl font-medium mt-4 mb-2;
+}
+
+.contentlayer-md p {
+  @apply mb-4;
+}
+
+.contentlayer-md a {
+  @apply text-blue-600 underline hover:text-blue-800;
+}
+
+.contentlayer-md ul {
+  @apply list-disc list-inside mb-4 pl-4;
+}
+
+.contentlayer-md ol {
+  @apply list-decimal list-inside mb-4 pl-4;
+}
+
+.contentlayer-md li {
+  @apply mb-1;
+}
+
+.contentlayer-md blockquote {
+  @apply border-l-4 border-gray-300 pl-4 italic text-gray-600 my-4;
+}
+
+.contentlayer-md pre {
+  @apply bg-gray-900 text-white text-sm p-4 rounded overflow-x-auto mb-4;
+}
+
+.contentlayer-md code {
+  @apply bg-gray-100 text-pink-600 font-mono text-sm px-1 py-0.5 rounded;
+}
+
+.contentlayer-md img {
+  @apply max-w-full h-auto rounded-md my-4;
+}
+
+.contentlayer-md hr {
+  @apply border-t my-6;
+}
+

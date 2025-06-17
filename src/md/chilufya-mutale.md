@@ -7,8 +7,6 @@ social: '@chilumm'
 
 [@chilumm](https://twitter.com/chilumm)
 
----
-
 <!-- ![Headshot](/path-to-your-headshot.jpg) -->
 
 ---
@@ -29,39 +27,34 @@ At my core, I build **websites and software that work beautifully**. Whether you
 
 Here’s how I can help:
 
-* **Custom Website Design & Development**
-  Fast, responsive websites with a focus on usability, performance, and visual impact.
+**Custom Website Design & Development** Fast, responsive websites with a focus on usability, performance, and visual impact.
 
-* **Web Applications & MVPs**
-  Scalable, production-ready tools and apps tailored to your business logic.
+**Web Applications & MVPs** Scalable, production-ready tools and apps tailored to your business logic.
 
-* **CMS Integrations (Sanity, WordPress, etc.)**
-  Dynamic content management for marketing sites or editorial teams.
+**CMS Integrations (Sanity, WordPress, etc.)** Dynamic content management for marketing sites or editorial teams.
 
-* **UI/UX Design Systems**
-  From Figma to frontend—design systems that stay consistent and scale.
+**UI/UX Design Systems** From Figma to frontend—design systems that stay consistent and scale.
 
-* **Technical Consulting**
-  Architecture planning, audits, and strategic guidance for digital projects.
+**Technical Consulting** Architecture planning, audits, and strategic guidance for digital projects.
 
 ---
 
 ## Why Work With Me?
 
-* 🎯 **End-to-End Expertise**: From strategy to shipping, I manage the full stack and understand how every piece fits together.
+<!-- * 🎯 **End-to-End Expertise**: From strategy to shipping, I manage the full stack and understand how every piece fits together.
 * 💬 **Clear Communication**: I keep things transparent and collaborative—no jargon, just progress.
 * ⚡ **Performance-Minded**: I care about speed, maintainability, and the small details users never notice (but always feel).
 * 🧠 **Problem-Solver at Heart**: I don’t just build what’s asked—I ask the right questions to build what’s needed.
 
----
+--- -->
 
-## A Bit More About Me
+<!-- ## A Bit More About Me
 
 I believe great digital experiences start with empathy and curiosity. I love learning how things work—whether it's a business model or a new JavaScript framework. Outside of code, I’m probably reading, sketching UI ideas, or helping a friend fix their site.
 
 If you're here just exploring or want to geek out about tech, tools, or design—I'd love to connect.
 
----
+--- -->
 
 ## Get In Touch
 

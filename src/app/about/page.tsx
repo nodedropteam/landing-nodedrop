@@ -1,5 +1,5 @@
 import React from 'react'
-import ProfileCard, { ProfileCardList } from '~/components/elements/ProfileCard'
+import { ProfileCardList } from '~/components/elements/ProfileCard'
 import Header from '~/components/elements/Header'
 import AboutProfile from '~/components/about/AboutProfile'
 import Footer from '~/components/elements/Footer'
