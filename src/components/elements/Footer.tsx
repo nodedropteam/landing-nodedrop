@@ -4,6 +4,17 @@ import Image from 'next/image'
 import { mainMenu } from './Header'
 import { Button } from '../ui/button'
 
+const footerMenuContact = [
+    {
+        name: "chilufya@nodedropp.com",
+        url: "mailto:chilufya@nodedropp.com"
+    },
+    {
+        name: "ig: @nodedropwebsites",
+        url: "https://www.instagram.com/nodedropwebsites/"
+    }
+]
+
 export default function Footer() {
     return (
         <div className='py-40 bg-linear-to-t from-background to-transparent full from-60%'>
@@ -14,11 +25,11 @@ export default function Footer() {
                 <p className='italic'>
                     Claim your space. Grow your reach.
                 </p>
-                <div className="menu">
+                <div className="menu space-y-2 text-sm">
                     <ul className='flex flex-col md:flex-row items-center justify-center'>
-                        {mainMenu.map((item, index) => (
+                        {footerMenuContact.map((item, index) => (
                             <li key={index}>
-                                <a href={item.url}>
+                                <a href={item.url} target='_blank'>
                                     <Button variant={`link`} size={`sm`}>{item.name}</Button>
                                 </a>
                             </li>
