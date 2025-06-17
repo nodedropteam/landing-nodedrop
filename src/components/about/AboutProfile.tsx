@@ -11,18 +11,18 @@ export default function AboutProfile() {
                     <div className='space-y-4'>
                         <h4 className='font-bold text-lg'>About</h4>
                         <p>
-                            I'm Chilufya Mutale—Full Stack Developer, designer, and
+                            {`                            I'm Chilufya Mutale—Full Stack Developer, designer, and
                             founder of this studio. With a background in Computer
                             Science and years of experience building digital products,
                             I specialize in creating clean, scalable, and user-friendly software.
-                            <br />
-                            From front-end design to back-end architecture, I build web
+`}                            <br />
+                            {`                            From front-end design to back-end architecture, I build web
                             experiences that are fast, intuitive, and built to last.
                             I care about performance, usability, and the small details that make big impacts.
-                            <br />
-                            This work isn’t just about code—it’s about helping people
+`}                            <br />
+                            {`                            This work isn’t just about code—it’s about helping people
                             bring ideas to life with clarity, craft, and confidence.
-                        </p>
+`}                        </p>
                     </div>
                     <div className='space-y-4'>
                         <h4 className='font-bold text-lg'>How I can help.</h4>
