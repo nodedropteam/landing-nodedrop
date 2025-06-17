@@ -25,8 +25,13 @@ export default function AboutProfile() {
                                     <Button className='px-0' variant={`link`}>cmutalem@gmail.com</Button></Link>
                             </li>
                             <li>
-                                <Link href={`https://www.github.com/cmmutale`}>
+                                <Link href={`https://www.github.com/cmmutale`} target='_blank'>
                                     <Button className='px-0' variant={`link`}>github: cmmutale</Button>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href={`https://www.linkedin.com/in/chilufya-mutale`} target='_blank'>
+                                    <Button className='px-0' variant={`link`}>LinkedIn: Chilufya Mutale</Button>
                                 </Link>
                             </li>
                         </ul>
