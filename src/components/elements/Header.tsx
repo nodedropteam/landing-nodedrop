@@ -6,11 +6,11 @@ import Image from 'next/image'
 export const mainMenu = [
     {
         name: "Our work",
-        url: "#projects"
+        url: "/#projects"
     },
     {
         name: "Services",
-        url: "#services"
+        url: "/#services"
     },
     {
         name: "Web Design",
@@ -22,7 +22,7 @@ export const mainMenu = [
     },
     {
         name: "Pricing",
-        url: "#pricing"
+        url: "/#pricing"
     },
     {
         name: "About",
