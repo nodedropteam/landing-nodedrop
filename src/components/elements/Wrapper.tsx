@@ -3,7 +3,7 @@ import React from 'react';
 interface Props {
     children: React.ReactNode;
     className?: string;
-    variant?: 'base' | 'wide' | 'full';
+    variant?: 'base' | 'wide' | 'full' | 'hero';
     scrollName?: string;
 }
 
@@ -11,7 +11,8 @@ export default function Wrapper({ children, className = '', variant = 'base', sc
     const variants = {
         base: '',
         wide: 'feature',
-        full: 'full'
+        full: 'full',
+        hero: 'pt-36',
     };
 
     const classString = `${className} ${variants[variant]}`.trim();

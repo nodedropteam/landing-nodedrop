@@ -23,6 +23,10 @@ export const mainMenu = [
     {
         name: "Pricing",
         url: "#pricing"
+    },
+    {
+        name: "About",
+        url: "/about"
     }
 ]
 
