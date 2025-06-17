@@ -1,5 +1,8 @@
 import Image from 'next/image'
 import Wrapper from './Wrapper'
+import { allDocs } from 'contentlayer/generated'
+import { Button } from '../ui/button'
+import Link from 'next/link'
 
 const TeamMembers = [
     {
@@ -20,13 +23,13 @@ const TeamMembers = [
         role: "",
         bio: ""
     },
-
 ]
+
 
 export default function ProfileCard() {
     return (
         <div>
-            <Wrapper className='' variant='hero'>
+            <Wrapper className='py-12'>
                 <div className='flex gap-4 items-start flex-wrap'>
                     <Image alt='headshot' src={`/headshot_chilu.jpg`} width={200} height={200} className='rounded-full' />
                     <div className="body space-y-2 pt-4">
@@ -53,6 +56,27 @@ export function ProfileCards() {
                     </div>
                 </div>
             ))}
+        </div>
+    )
+}
+
+export function ProfileCardList() {
+    const docs = allDocs;
+
+    return (
+        <div>
+            <Wrapper variant='hero' className='space-y-4'>
+                <h3 className='font-bold text-lg'>Meet The Team</h3>
+                {
+                    docs.map((doc, idx) => (
+                        <div key={idx}>
+                            <Link href={doc.url}>
+                                <Button>{doc.title}</Button>
+                            </Link>
+                        </div>
+                    ))
+                }
+            </Wrapper>
         </div>
     )
 }

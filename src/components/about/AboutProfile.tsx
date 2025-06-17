@@ -11,73 +11,16 @@ export default function AboutProfile() {
                     <div className='space-y-4'>
                         <h4 className='font-bold text-lg'>About</h4>
                         <p>
-                            {`                            I'm Chilufya Mutale—Full Stack Developer, designer, and
-                            founder of this studio. With a background in Computer
-                            Science and years of experience building digital products,
-                            I specialize in creating clean, scalable, and user-friendly software.
-`}                            <br />
-                            {`                            From front-end design to back-end architecture, I build web
-                            experiences that are fast, intuitive, and built to last.
-                            I care about performance, usability, and the small details that make big impacts.
-`}                            <br />
-                            {`                            This work isn’t just about code—it’s about helping people
-                            bring ideas to life with clarity, craft, and confidence.
-`}                        </p>
+                            Nodedrop was founded in 2024 with a simple goal: to bridge the gap between functional design and powerful software. We help businesses turn complex ideas into intuitive, scalable digital products—without the overhead of a full in-house team.
+                            <br />
+                            Whether it's a website, custom app, or internal tool, we craft solutions tailored to real business challenges. Our work is lean, focused, and built to last—so you get thoughtful design and solid engineering, without wasting time or budget.
+                            <br />
+                            Think of us as your technical partner: nimble, reliable, and just as invested in your success as you are.
+                        </p>
                     </div>
                     <div className='space-y-4'>
-                        <h4 className='font-bold text-lg'>How I can help.</h4>
-                        <ul className='space-y-2 list-disc'>
-                            <li>
-                                <span className='font-bold block'>Custom Web Design and Development</span>
-                                <p>
-                                    Fast, responsive websites with a focus on usability, performance, and visual impact.
-                                </p>
-                            </li>
-                            <li>
-                                <span className='font-bold block'>Web Apps & MVPs</span>
-                                <p>
-                                    Scalable, production-ready tools and apps tailored to your business logic.
-                                </p>
-                            </li>
-                            <li>
-                                <span className='font-bold block'>CMS Integrations (Sanity, WordPress, etc.)</span>
-                                <p>
-                                    Dynamic content management for marketing sites or editorial teams.
-                                </p>
-                            </li>
-                            <li>
-                                <span className='font-bold block'>UI/UX Design Systems</span>
-                                <p>
-                                    From Figma to frontend—design systems that stay consistent and scale.
-                                </p>
-                            </li>
-                            <li>
-                                <span className='font-bold block'>Technical Consulting</span>
-                                <p>
-                                    Architecture planning, audits, and strategic guidance for digital projects.
-                                </p>
-                            </li>
-                        </ul>
-
                     </div>
                     <div className='space-y-4'>
-                        <h4 className='font-bold text-lg'>Contact</h4>
-                        <ul>
-                            <li>
-                                <Link href={`mailto:cmutalem@gmail.com`}>
-                                    <Button className='px-0' size={`sm`} variant={`link`}>cmutalem@gmail.com</Button></Link>
-                            </li>
-                            <li>
-                                <Link href={`https://www.github.com/cmmutale`} target='_blank'>
-                                    <Button className='px-0' size={`sm`} variant={`link`}>github: cmmutale</Button>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href={`https://www.linkedin.com/in/chilufya-mutale`} target='_blank'>
-                                    <Button className='px-0' size={`sm`} variant={`link`}>LinkedIn: Chilufya Mutale</Button>
-                                </Link>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </Wrapper>

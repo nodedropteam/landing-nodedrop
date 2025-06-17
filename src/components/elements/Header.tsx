@@ -1,7 +1,6 @@
 import React from 'react'
 import Wrapper from './Wrapper'
 import { Button } from '../ui/button'
-import Image from 'next/image'
 
 export const mainMenu = [
     {

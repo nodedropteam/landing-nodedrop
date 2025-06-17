@@ -1,7 +1,6 @@
 import React from 'react'
 import Wrapper from './Wrapper'
 import Image from 'next/image'
-import { mainMenu } from './Header'
 import { Button } from '../ui/button'
 
 const footerMenuContact = [

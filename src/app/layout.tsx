@@ -1,7 +1,7 @@
 import "~/css/globals.css";
 
 import { type Metadata } from "next";
-import { Geist, Montserrat } from "next/font/google";
+import { Montserrat } from "next/font/google";
 
 export const metadata: Metadata = {
     title: "Software Solutions for Business Problems",
