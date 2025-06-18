@@ -21,7 +21,7 @@ export default function CaseStudy() {
     return (
         <section>
             <Wrapper className='py-24' scrollName='projects'>
-                <div className="copy">
+                <div className="copy mb-8">
                     <h2 className='text-4xl font-medium text-center mb-8 max-w-[640px] mx-auto'>
                         Work our clients get
                     </h2>
@@ -29,9 +29,15 @@ export default function CaseStudy() {
                         and you will too...
                     </p>
                 </div>
-                <div className="img-box relative w-full h-[200px] lg:h-[700px] mb-4">
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mb-4 h-96'>
+                <div className="img-box relative w-full h-full">
                     <Image src={`/emmahlub.co.za.png`} alt='' fill className='lg:object-cover object-top border-[3px] border-[#1e1e1e] shadow-xl' />
                 </div>
+                <div className="img-box relative w-full h-full">
+                    <Image src={`/Law firm template.svg`} alt='' fill className='lg:object-cover object-top border-[3px] border-[#1e1e1e] shadow-xl' />
+                </div>
+                </div>
+
                 <div className='p-8 rounded-2xl bg-accent border text-accent-foreground text-center mb-16'>
                     <p className='uppercase text-lg italic font-medium text-muted-foreground'>Emmahlubi Inc.</p>
                 </div>
