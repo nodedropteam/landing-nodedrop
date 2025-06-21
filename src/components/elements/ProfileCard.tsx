@@ -67,6 +67,7 @@ export function ProfileCardList() {
         <div>
             <Wrapper variant='hero' className='space-y-4'>
                 <h3 className='font-bold text-lg'>Meet The Team</h3>
+                <div className="flex flex-wrap gap-4">
                 {
                     docs.map((doc, idx) => (
                         <div key={idx}>
@@ -76,6 +77,7 @@ export function ProfileCardList() {
                         </div>
                     ))
                 }
+                </div>
             </Wrapper>
         </div>
     )
