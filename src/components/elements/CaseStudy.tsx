@@ -29,24 +29,20 @@ export default function CaseStudy() {
                         and you will too...
                     </p>
                 </div>
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mb-4 h-96'>
-                <div className="img-box relative w-full h-full">
-                    <Image src={`/emmahlub.co.za.png`} alt='' fill className='lg:object-cover object-top border-[3px] border-[#1e1e1e] shadow-xl' />
-                </div>
-                <div className="img-box relative w-full h-full">
-                    <Image src={`/Law firm template.svg`} alt='' fill className='lg:object-cover object-top border-[3px] border-[#1e1e1e] shadow-xl' />
-                </div>
-                </div>
-
-                <div className='p-8 rounded-2xl bg-accent border text-accent-foreground text-center mb-16'>
-                    <p className='uppercase text-lg italic font-medium text-muted-foreground'>Emmahlubi Inc.</p>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-8 h-96 mb-8'>
+                    <div className="img-box relative w-full h-full">
+                        <Image src={`/emmahlubi_thumbnail.png`} alt='' fill className='lg:object-cover object-top' />
+                    </div>
+                    <div className="img-box relative w-full h-full">
+                        <Image src={`/dkz_thumbnail.png`} alt='' fill className='lg:object-cover object-top' />
+                    </div>
                 </div>
 
                 <div className="card-grid flex flex-wrap gap-8">
                     {features.map((feature, index) => (
                         <div key={index} className='w-full sm:w-[45%] md:w-[25%] grow'>
                             <div className="card" key={index}>
-                                <div className="card-header mb-4">
+                                <div className="card-header mb-2">
                                     <h3 className="card-title text-lg font-semibold text-center">{feature.title}</h3>
                                 </div>
                                 <div className="card-body">
