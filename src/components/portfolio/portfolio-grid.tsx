@@ -11,9 +11,17 @@ export default function PortfolioGrid() {
                     <h2 className='text-center mb-4 font-bold text-3xl md:text-4xl hover:underline'>
                         <Link href={`https://beige-swan-461391.hostingersite.com/`} target='_blank'>Dynamic Kidz Zone</Link>
                     </h2>
-                <Image src={`/dkz_fullscreen.png`} width={800} height={1000} alt='hello' className='mx-auto object-contain hidden md:block'/>
-                <Image src={`/dkz_fullscreen_mobile.png`} width={250} height={1000} alt='hello' className='mx-auto object-contain md:hidden'/>
+                    <Image src={`/dkz_fullscreen.png`} width={800} height={1000} alt='hello' className='mx-auto object-contain hidden md:block' />
+                    <Image src={`/dkz_fullscreen_mobile.png`} width={250} height={1000} alt='hello' className='mx-auto object-contain md:hidden' />
                 </div>
+                                <div className='mx-auto bg-[#B3D1FF] py-12'>
+                    <h2 className='text-center mb-4 font-bold text-3xl md:text-4xl hover:underline'>
+                        <Link href={`https://emmahlubi.co.za/`} target='_blank'>Emmahlubi</Link>
+                    </h2>
+                    <Image src={`/emmahlubi_fullscreen.png`} width={800} height={1000} alt='hello' className='mx-auto object-contain hidden md:block' />
+                    <Image src={`/emmahlubi_fullscreen_mobile.png`} width={250} height={1000} alt='hello' className='mx-auto object-contain md:hidden' />
+                </div>
+
             </Wrapper>
         </section>
     )
