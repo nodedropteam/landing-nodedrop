@@ -5,7 +5,7 @@ import { Button } from '../ui/button'
 export const mainMenu = [
     {
         name: "Our work",
-        url: "/#projects"
+        url: "/portfolio"
     },
     {
         name: "Services",
