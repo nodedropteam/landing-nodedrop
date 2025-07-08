@@ -2,6 +2,7 @@ import React from 'react'
 import Wrapper from './Wrapper'
 import Image from 'next/image'
 import { Button } from '../ui/button'
+import Link from 'next/link'
 
 const footerMenuContact = [
     {
@@ -19,7 +20,9 @@ export default function Footer() {
         <div className='py-40 bg-linear-to-t from-background to-transparent full from-60%'>
             <Wrapper className='flex flex-col gap-10 text-center'>
                 <div className='flex justify-center'>
-                    <Image src={`/NODEDROP.svg`} alt='' width={100} height={100} />
+                    <Link href={`/`}>
+                        <Image src={`/NODEDROP.svg`} alt='' width={100} height={100} />
+                    </Link>
                 </div>
                 <p className='italic'>
                     Claim your space. Grow your reach.

@@ -21,13 +21,13 @@ export default function Hero() {
                 </div>
 
                 <div className="cta-row flex flex-wrap justify-center gap-4 mx-auto w-fit">
-                    <Link className='block' href={process.env.CALENDLY_LINK ?? "/not-found"} target='_blank'>
-                        <Button size={`lg`}>
+                    <Link className='block max-sm:w-full' href={process.env.CALENDLY_LINK ?? "/not-found"} target='_blank'>
+                        <Button size={`lg`} className='w-full'>
                             Schedule Project Audit
                         </Button>
                     </Link>
-                    <Link className='block' href="/projects">
-                        <Button size={`lg`} variant={`outline`}>
+                    <Link className='block max-sm:w-full' href="/projects">
+                        <Button size={`lg`} variant={`outline`} className='w-full'>
                             See Our work
                         </Button>
                     </Link>
