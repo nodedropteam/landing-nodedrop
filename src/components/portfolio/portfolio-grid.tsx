@@ -3,25 +3,40 @@ import Wrapper from '../elements/Wrapper'
 import Image from 'next/image'
 import Link from 'next/link'
 
+const projects = [
+    {
+        name: 'Dynamic Kidz Zone',
+        image: '/dkz_fullscreen.svg',
+        mobile: '/dkz_fullscreen_mobile.png',
+        link: 'https://beige-swan-461391.hostingersite.com/',
+        theme: 'bg-[#C5FFB3]'
+    },
+    {
+        name: 'Emmahlubi',
+        image: '/emmahlubi_fullscreen.png',
+        mobile: '/emmahlubi_fullscreen_mobile.png',
+        link: 'https://emmahlubi.co.za',
+        theme: 'bg-[#B3D1FF]'
+    },
+]
+
 export default function PortfolioGrid() {
     return (
         <section className='bg full'>
             <Wrapper variant='hero' className=''>
-                <div className='mx-auto bg-[#C5FFB3] py-12'>
-                    <h2 className='text-center mb-4 font-bold text-3xl md:text-4xl hover:underline'>
-                        <Link href={`https://beige-swan-461391.hostingersite.com/`} target='_blank'>Dynamic Kidz Zone</Link>
-                    </h2>
-                    <Image src={`/dkz_fullscreen.png`} width={800} height={1000} alt='hello' className='mx-auto object-contain hidden md:block' />
-                    <Image src={`/dkz_fullscreen_mobile.png`} width={250} height={1000} alt='hello' className='mx-auto object-contain md:hidden' />
-                </div>
-                                <div className='mx-auto bg-[#B3D1FF] py-12'>
-                    <h2 className='text-center mb-4 font-bold text-3xl md:text-4xl hover:underline'>
-                        <Link href={`https://emmahlubi.co.za/`} target='_blank'>Emmahlubi</Link>
-                    </h2>
-                    <Image src={`/emmahlubi_fullscreen.png`} width={800} height={1000} alt='hello' className='mx-auto object-contain hidden md:block' />
-                    <Image src={`/emmahlubi_fullscreen_mobile.png`} width={250} height={1000} alt='hello' className='mx-auto object-contain md:hidden' />
-                </div>
-
+                {
+                    projects.map((project, index) => {
+                        return (
+                            <div className={`mx-auto ${project.theme} py-12`}>
+                                <h2 className='text-center mb-4 font-bold text-3xl md:text-4xl hover:underline'>
+                                    <Link href={project.link} target='_blank'>{project.name}</Link>
+                                </h2>
+                                <Image src={project.image} width={800} height={1000} alt='hello' className='mx-auto object-contain hidden md:block' />
+                                <Image src={project.mobile} width={250} height={1000} alt='hello' className='mx-auto object-contain md:hidden' />
+                            </div>
+                        )
+                    })
+                }
             </Wrapper>
         </section>
     )
