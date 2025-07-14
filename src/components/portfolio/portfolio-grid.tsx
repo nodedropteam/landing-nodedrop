@@ -27,7 +27,7 @@ export default function PortfolioGrid() {
                 {
                     projects.map((project, index) => {
                         return (
-                            <div className={`mx-auto ${project.theme} py-12`}>
+                            <div className={`mx-auto ${project.theme} py-12`} key={index}>
                                 <h2 className='text-center mb-4 font-bold text-3xl md:text-4xl hover:underline'>
                                     <Link href={project.link} target='_blank'>{project.name}</Link>
                                 </h2>
