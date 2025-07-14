@@ -31,8 +31,8 @@ export default function PortfolioGrid() {
                                 <h2 className='text-center mb-4 font-bold text-3xl md:text-4xl hover:underline'>
                                     <Link href={project.link} target='_blank'>{project.name}</Link>
                                 </h2>
-                                <Image src={project.image} width={800} height={1000} alt='hello' className='mx-auto object-contain hidden md:block' />
-                                <Image src={project.mobile} width={250} height={1000} alt='hello' className='mx-auto object-contain md:hidden' />
+                                <Image src={project.image} width={800} height={1000} alt='hello' className='mx-auto object-contain hidden md:block border-black border-8 rounded-sm' />
+                                <Image src={project.mobile} width={250} height={1000} alt='hello' className='mx-auto object-contain md:hidden border-black border-4 rounded-sm' />
                             </div>
                         )
                     })
