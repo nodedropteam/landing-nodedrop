@@ -59,10 +59,8 @@ export default function Header() {
                                 <NavigationMenuItem key={item.title}>
                                     {item.href ? (
                                         <>
-                                            <NavigationMenuLink>
-                                                <Link href={item.href}>
+                                            <NavigationMenuLink href={item.href}>
                                                     <Button variant="ghost">{item.title}</Button>
-                                                </Link>
                                             </NavigationMenuLink>
                                         </>
                                     ) : (
