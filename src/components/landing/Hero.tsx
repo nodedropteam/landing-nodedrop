@@ -26,7 +26,7 @@ export default function Hero() {
                             Schedule Project Audit
                         </Button>
                     </Link>
-                    <Link className='block max-sm:w-full' href="/projects">
+                    <Link className='block max-sm:w-full' href="/portfolio">
                         <Button size={`lg`} variant={`outline`} className='w-full'>
                             See Our work
                         </Button>
