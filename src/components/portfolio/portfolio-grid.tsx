@@ -22,17 +22,17 @@ const projects = [
 
 export default function PortfolioGrid() {
     return (
-        <section className='bg full'>
+        <section className='full'>
             <Wrapper variant='hero' className=''>
                 {
                     projects.map((project, index) => {
                         return (
-                            <div className={`mx-auto ${project.theme} py-12`} key={index}>
-                                <h2 className='text-center mb-4 font-bold text-3xl md:text-4xl hover:underline'>
+                            <div className={`mx-auto py-12`} key={index}>
+                                <h2 className='text-center mb-8 text-primary-foreground font-bold text-heading3 hover:underline'>
                                     <Link href={project.link} target='_blank'>{project.name}</Link>
                                 </h2>
-                                <Image src={project.image} width={800} height={1000} alt='hello' className='mx-auto object-contain hidden md:block border-black border-8 rounded-sm' />
-                                <Image src={project.mobile} width={250} height={1000} alt='hello' className='mx-auto object-contain md:hidden border-black border-4 rounded-sm' />
+                                <Image src={project.image} width={800} height={1000} alt='hello' className='mx-auto object-contain hidden md:block  rounded-sm' />
+                                <Image src={project.mobile} width={250} height={1000} alt='hello' className='mx-auto object-contain md:hidden  rounded-sm' />
                             </div>
                         )
                     })

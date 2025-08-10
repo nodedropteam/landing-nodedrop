@@ -13,14 +13,14 @@ export default function CallToAction() {
           </h2>
         </div>
 
-        <div className="cta-row flex flex-wrap justify-center gap-4 mx-auto w-fit">
-          <Link className='block' href={process.env.CALENDLY_LINK ?? "/not-found"} target='_blank'>
-            <Button size={`lg`}>
+        <div className="cta-row flex flex-wrap md:flex-flex-nowrap justify-center gap-4 mx-auto w-fit">
+          <Link className='w-full' href={process.env.CALENDLY_LINK ?? "/not-found"} target='_blank'>
+            <Button>
               Schedule Project Audit
             </Button>
           </Link>
-          <Link className='block' href="/projects">
-            <Button size={`lg`} variant={`outline`}>
+          <Link className='w-full' href="/projects">
+            <Button variant={`secondary`}>
               See Our work
             </Button>
           </Link>

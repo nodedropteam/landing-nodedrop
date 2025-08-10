@@ -1,71 +1,50 @@
 import React from 'react'
-import Wrapper from '../elements/Wrapper'
-import { Button } from '../ui/button';
-import { ArrowRight } from 'lucide-react';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@radix-ui/react-accordion';
 
-
-// const services = [
-//     { name: "Websites" },
-//     { name: "Mobile Apps" },
-//     { name: "Logos & branding" },
-//     { name: "Design systems" },
-//     { name: "SAAS" },
-//     { name: "Wireframes" },
-//     { name: "Stationary" },
-//     { name: "Pitch decks" },
-//     { name: "Slide decks" },
-//     { name: "Direct mail" },
-//     { name: "Infographics" },
-//     { name: "Brochures" },
-//     { name: "Signage" },
-//     { name: "Brand guides" },
-//     { name: "Social media graphics" },
-//     { name: "Billboards" },
-//     { name: "Trade show banners" },
-//     { name: "Email graphics" },
-//     { name: "Resumes" },
-//     { name: "Business cards" },
-//     { name: "Packaging" },
-//     { name: "Blog graphics" },
-//     { name: "Digital ads" },
-//     { name: "Icons" }
-// ];
 
 const featured = [
-    {name: "Design Systems"},
-    {name: "Web Design"},
-    {name: "Web Development"},
+    { name: "Design Systems", description: "Create a cohesive design system for your brand." },
+    { name: "Web Design", description: "Craft visually stunning and user-friendly websites." },
+    { name: "Web Development", description: "Build robust and scalable web applications." },
+    { name: "SEO Optimization", description: "Enhance your website's visibility on search engines." },
+    { name: "Content Creation", description: "Produce high-quality content that engages your audience." },
+    { name: "Branding & Identity", description: "Develop a strong brand identity that resonates with your audience." },
+    { name: "E-commerce Solutions", description: "Create seamless online shopping experiences." },
+    { name: "Mobile App Development", description: "Design and develop mobile applications for iOS and Android." },
+    { name: "Digital Marketing", description: "Implement effective digital marketing strategies to grow your business." },
+    { name: "Consulting & Strategy", description: "Provide expert advice and strategic planning for your projects." },
 ]
 
 
 export default function Services() {
     return (
         <section>
-            <Wrapper className='py-24 space-y-8' scrollName='services'>
-                <h2 className='font-bold text-2xl md:text-4xl max-w-[480px] mb-16'>
-                    Pick and choose your perfect service.
-                </h2>
-
-                <Button variant={`secondary`}>Learn more about our services</Button>
-
-                {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-                    {services.map((service, index) => (
-                        <div className=''>
-                            <Button size={`default`} variant={`link`} className='px-0'>
-                                <Check strokeWidth={3} />{" "}{service.name}
-                            </Button>
+            <div className="nodedrop-section flex flex-col relative py-24">
+                <div className="nodedrop-section-bg"></div>
+                <div className="nodedrop-section-block grow shrink basis-auto relative content">
+                    <div className="nodedrop-section-content flex flex-col relative">
+                        <div className="nodedrop-section-block-bg"></div>
+                        <div className="nodedrop-section-block-content grow shrink basis-auto">
+                            <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 max-w-[30ch] mx-auto'>Our Services</h2>
+                            <p className='text-xl text-center mx-auto mb-12 max-w-[40ch]'>
+                                Browse through our featured services below to find the perfect solution for your needs.
+                            </p>
+                            <Accordion type='single' collapsible className='w-full max-w-[800px] mx-auto'>
+                                {featured.map((item, index) => (
+                                    <AccordionItem key={index} value={`item-${index}`} className='border-t last:border-b  pt-6'>
+                                        <AccordionTrigger className='text-large font-bold mb-4 text-center w-full'>{item.name}</AccordionTrigger>
+                                        <AccordionContent className='text-lg text-center'>
+                                            <p>
+                                                {item.description}
+                                            </p>
+                                        </AccordionContent>
+                                    </AccordionItem>
+                                ))}
+                            </Accordion>
                         </div>
-                    ))}
-                </div> */}
-                <div className='border-t'>
-                    {featured.map((service, index) => (
-                        <div key={index} className='border-b py-3 w-full flex justify-between items-center'>
-                            <p className='font-medium'>{service.name}</p>
-                            <ArrowRight />
-                        </div>
-                    ))}
+                    </div>
                 </div>
-            </Wrapper>
+            </div>
         </section>
     )
 }

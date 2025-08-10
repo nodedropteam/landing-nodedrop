@@ -4,159 +4,108 @@ import { Button } from "~/components/ui/button";
 import Image from "next/image";
 import {
     NavigationMenu,
-    NavigationMenuContent,
     NavigationMenuItem,
     NavigationMenuLink,
     NavigationMenuList,
-    NavigationMenuTrigger,
 } from "~/components/ui/navigation-menu";
-import { Menu, MoveRight, X } from "lucide-react";
-import { useState } from "react";
+import { Menu, X } from "lucide-react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 export default function Header() {
     const navigationItems = [
-        {
-            title: "Our Work",
-            href: "/portfolio",
-            description: "",
-        },
-        {
-            title: "Pricing",
-            description: "Managing a small business today is already tough.",
-            href: "/#pricing"
-        },
-        {
-            title: "About",
-            description: "Managing a small business today is already tough.",
-            href: "/about"
-        },
-        // {
-        //     title: "Services",
-        //     description: "Managing a small business today is already tough.",
-        //     items: [
-        //         {
-        //             title: "Web Design",
-        //             href: "/web-design",
-        //         },
-        //         {
-        //             title: "Web Development",
-        //             href: "/web-development",
-        //         },
-        //     ],
-        // },
-
+        { title: "Our Work", href: "/portfolio" },
+        { title: "Pricing", href: "/#pricing" },
+        { title: "About", href: "/about" },
     ];
 
     const [isOpen, setOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const updateHeaderStyle = () => {
+            setScrolled(window.scrollY > 0);
+        };
+
+        // ✅ Run immediately on load to check initial position
+        updateHeaderStyle();
+
+        // ✅ Update on scroll
+        window.addEventListener("scroll", updateHeaderStyle);
+        return () => {
+            window.removeEventListener("scroll", updateHeaderStyle);
+        };
+    }, []);
+
     return (
-        <header className="w-full z-40 fixed top-0 left-0 bg-background content">
-            <div className="mx-auto w-full min-h-20 flex gap-4 flex-row lg:grid lg:grid-cols-3 items-center">
-                <div className="justify-start items-center gap-4 lg:flex hidden flex-row" id="menu-desktop">
-                    <NavigationMenu className="flex justify-start items-start">
-                        <NavigationMenuList className="flex justify-start gap-4 flex-row">
+        <header
+            className={`w-full z-50 fixed top-0 left-0 transition-colors duration-300 ${
+                scrolled ? "bg-background text-foreground shadow" : "bg-transparent text-background"
+            }`}
+        >
+            <div className="w-full min-h-20 flex gap-4 flex-row lg:grid lg:grid-cols-3 items-center px-4">
+                {/* Desktop Menu */}
+                <div className="justify-start items-center gap-4 lg:flex hidden flex-row">
+                    <NavigationMenu>
+                        <NavigationMenuList className="flex gap-4">
                             {navigationItems.map((item) => (
                                 <NavigationMenuItem key={item.title}>
-                                    {item.href ? (
-                                        <>
-                                            <NavigationMenuLink href={item.href}>
-                                                    <Button variant="ghost">{item.title}</Button>
-                                            </NavigationMenuLink>
-                                        </>
-                                    ) : (
-                                        <>
-                                            {/* <NavigationMenuTrigger className="font-medium text-sm">
-                                                {item.title}
-                                            </NavigationMenuTrigger>
-                                            <NavigationMenuContent className="!w-[450px] p-4">
-                                                <div className="flex flex-col lg:grid grid-cols-2 gap-4">
-                                                    <div className="flex flex-col h-full justify-between">
-                                                        <div className="flex flex-col">
-                                                            <p className="text-base">{item.title}</p>
-                                                            <p className="text-muted-foreground text-sm">
-                                                                {item.description}
-                                                            </p>
-                                                        </div>
-                                                        <Button size="sm" className="mt-10">
-                                                            Book a call today
-                                                        </Button>
-                                                    </div>
-                                                    <div className="flex flex-col text-sm h-full justify-end">
-                                                        {item.items?.map((subItem) => (
-                                                            <NavigationMenuLink
-                                                                href={subItem.href}
-                                                                key={subItem.title}
-                                                                className="flex flex-row justify-between items-center hover:bg-muted py-2 px-4 rounded"
-                                                            >
-                                                                <span>{subItem.title}</span>
-                                                                <MoveRight className="w-4 h-4 text-muted-foreground" />
-                                                            </NavigationMenuLink>
-                                                        ))}
-                                                    </div>
-                                                </div>
-                                            </NavigationMenuContent> */}
-                                        </>
-                                    )}
+                                    <NavigationMenuLink href={item.href}>
+                                        {item.title}
+                                    </NavigationMenuLink>
                                 </NavigationMenuItem>
                             ))}
                         </NavigationMenuList>
                     </NavigationMenu>
                 </div>
-                <div className="flex lg:justify-center">
+
+                {/* Logo */}
+                <div className="flex lg:justify-center z-50">
                     <Link href={`/`} id="home-logo">
-                        <Image src={`/NODEDROP.svg`} alt='' width={100} height={100} />
+                        <Image
+                            src={`/NODEDROP.svg`}
+                            alt=""
+                            width={150}
+                            height={100}
+                        />
                     </Link>
                 </div>
 
+                {/* Desktop CTA */}
                 <div className="flex justify-end w-full gap-4">
-                    {/* <Button variant="ghost" className="hidden md:inline">
-                        Book a demo
-                    </Button> */}
-                    {/* <div className="border-r hidden md:inline"></div> */}
                     <Link href={`https://calendly.com/cmutalem-business/30min`}>
-                        <Button className="hidden sm:inline">Get FREE Website Audit</Button>
+                        <Button className="hidden lg:inline">
+                            Get FREE Website Audit
+                        </Button>
                     </Link>
                 </div>
-                <div className="flex w-12 shrink lg:hidden items-end justify-end" id="menu-mobile">
-                    <Button variant="ghost" onClick={() => setOpen(!isOpen)}>
-                        {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+
+                {/* Mobile Menu Button */}
+                <div className="flex w-12 shrink lg:hidden items-end justify-end z-50">
+                    <Button size="icon" onClick={() => setOpen(!isOpen)}>
+                        {isOpen ? <X className="size-6" /> : <Menu className="size-6" />}
                     </Button>
-                    {isOpen && (
-                        <div className="absolute top-20 border-t flex flex-col w-full left-0 bg-background shadow-lg py-4 gap-8 content">
-                            {navigationItems.map((item) => (
-                                <div key={item.title}>
-                                    <div className="flex flex-col gap-2">
-                                        {item.href ? (
-                                            <Link
-                                                href={item.href}
-                                                className="flex justify-between items-center"
-                                            >
-                                                <span className="text-lg">{item.title}</span>
-                                                {/* <MoveRight className="w-4 h-4 stroke-1 text-muted-foreground" /> */}
-                                            </Link>
-                                        ) : (
-                                            <p className="text-lg">{item.title}</p>
-                                        )}
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    )}
                 </div>
             </div>
+
+            {/* Fullscreen Mobile Menu */}
+            {isOpen && (
+                <div className="fixed inset-0 bg-background text-foreground z-40 flex flex-col items-center justify-center gap-8 p-8">
+                    {navigationItems.map((item) => (
+                        <Link
+                            key={item.title}
+                            href={item.href}
+                            className="text-2xl font-semibold"
+                            onClick={() => setOpen(false)}
+                        >
+                            {item.title}
+                        </Link>
+                    ))}
+                    <Link href={`https://calendly.com/cmutalem-business/30min`} onClick={() => setOpen(false)}>
+                        <Button size="lg">Get FREE Website Audit</Button>
+                    </Link>
+                </div>
+            )}
         </header>
     );
-};
-// {item.items &&
-//                                             item.items.map((subItem) => (
-//                                                 <Link
-//                                                     key={subItem.title}
-//                                                     href={subItem.href}
-//                                                     className="flex justify-between items-center"
-//                                                 >
-//                                                     <span className="text-muted-foreground">
-//                                                         {subItem.title}
-//                                                     </span>
-//                                                     {/* <MoveRight className="w-4 h-4 stroke-1" /> */}
-//                                                 </Link>
-//                                             ))}
+}

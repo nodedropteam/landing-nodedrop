@@ -1,6 +1,3 @@
-import Wrapper from '~/components/elements/Wrapper'
-import { Button } from '~/components/ui/button';
-
 const processSteps = [
     {
         title: "Audit",
@@ -20,37 +17,34 @@ const processSteps = [
     }
 ];
 
-
 export default function ServiceIndustry() {
     return (
-        <section>
-            <Wrapper className='py-24 flex flex-wrap gap-4' scrollName='about'>
-                <div className="copy w-full md:w-1/5 grow">
-                    <h2 className='font-bold text-2xl md:text-4xl max-w-[480px] mb-16'>
-                        We design and develop for service businesses.
-                    </h2>
-                </div>
+        <section className='full'>
+            <div className="nodedrop-section relative flex flex-col text-foreground">
+                <div className="noderop-section-background"></div>
+                <div className="noderop-section-content grow shrink basis-auto flex flex-auto relaive w-full z-0 py-16">
+                    <div className="nodedrop-section-content-background"></div>
+                    <div className="nodedrop-section-block-content relative z-10 grow shrink basis-auto content py-16">
+                        <h2 className='mb-12 text-heading2 text-center font-bold mx-auto'>
+                            We design and develop for service businesses.
+                        </h2>
+                        <p className="text-center text-xl mb-12 max-w-[60ch] mx-auto">
+                            Our process is simple and effective, designed to get you the best results with minimal hassle.
+                        </p>
 
-                <div className="card-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full md:w-4/6">
-                    {processSteps.map((step, index) => (
-                        <div key={index} className='w-full'>
-                            <div className="card bg-card p-2 border rounded-md h-full" key={index}>
-                                <div className="card-header pb-3">
-                                    <Button size={`icon`} variant={`default`} className='mb-8 rounded-sm'>
-                                        {""}{index + 1}
-                                    </Button>
-                                    <h3 className="card-header-title font-bold text-lg">
-                                        {step.title}
-                                    </h3>
+                        <div className="flex flex-row gap-8 justify-center flex-wrap">
+                            {processSteps.map((step, index) => (
+                                <div key={index} className="basis-[300px] grow-0 shrink-0 aspect-[2/3]">
+                                <div key={index} className="w-full py-8 px-6 flex flex-col gap-4 bg-black text-white hover:bg-secondary transition-colors duration-300 h-full">
+                                    <h3 className='text-[28px] font-bold'>{step.title}</h3>
+                                    <p className='text-sm'>{step.description}</p>
                                 </div>
-                                <p className="card-description">
-                                    {step.description}
-                                </p>
-                            </div>
+                                </div>
+                            ))}
                         </div>
-                    ))}
+                    </div>
                 </div>
-            </Wrapper>
+            </div>
         </section>
     )
 }

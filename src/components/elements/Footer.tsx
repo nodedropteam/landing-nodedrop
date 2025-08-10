@@ -1,8 +1,8 @@
 import React from 'react'
-import Wrapper from './Wrapper'
 import Image from 'next/image'
 import { Button } from '../ui/button'
 import Link from 'next/link'
+import { Instagram } from "lucide-react";
 
 const footerMenuContact = [
     {
@@ -17,32 +17,48 @@ const footerMenuContact = [
 
 export default function Footer() {
     return (
-        <div className='py-40 bg-linear-to-t from-background to-transparent full from-60%'>
-            <Wrapper className='flex flex-col gap-10 text-center'>
-                <div className='flex justify-center'>
-                    <Link href={`/`}>
-                        <Image src={`/NODEDROP.svg`} alt='' width={100} height={100} />
-                    </Link>
-                </div>
-                <p className='italic'>
-                    Claim your space. Grow your reach.
-                </p>
-                <div className="menu space-y-2 text-sm">
-                    <ul className='flex flex-col md:flex-row items-center justify-center'>
-                        {footerMenuContact.map((item, index) => (
-                            <li key={index}>
-                                <a href={item.url} target='_blank'>
-                                    <Button variant={`link`} size={`sm`}>{item.name}</Button>
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+        <footer className='full'>
+            <div className="nodedrop-section-footer min-h-screen flex flex-col relative">
+                <div className="section-background"></div>
+                <div className="section-content grow shrink basis-auto content relative py-24 bg-accent text-accent-foreground">
+                    <div className="section-content-wrapper">
+                        <div className="section-content-background"></div>
+                        <div className="section-inner-content">
+                            <div className='space-y-8'>
+                                <Image src={`/NODEDROP.svg`} width={200} height={100} alt='nodedrop logo' />
+                                <p className='text-xl text-left font-medium'>
+                                    Claim your space. Grow your reach.
+                                </p>
 
-                <p className='text-sm font-bold'>
-                    © Copyright 2025. All rights reserved.
-                </p>
-            </Wrapper>
-        </div>
+                                <div className='space-y-4'>
+                                    <Link className='block' href={`mailto:chilufya@noderopp.com`}>
+                                        <Button>Leave Us A Message</Button>
+                                    </Link>
+                                    <Link className='block' href={`https://calendly.com/cmutalem-business/30min`}>
+                                        <Button>Get A Free Website Audit</Button>
+                                    </Link>
+                                </div>
+
+                                <div className='space-y-4'>
+                                    <Link className='block' href={`https://www.instagram.com/nodedropwebsites/`} target='_blank'>
+                                        <Button size={`icon`} className='rounded-full !bg-white'>
+                                            <Instagram className='size-6' />
+                                        </Button>
+                                    </Link>
+                                    <Link className='block font-medium underline text-xl' href={`mailto:chilufya@noderopp.com`}>
+                                        chilufya@nodedropp.com
+                                    </Link>
+                                </div>
+                                <div>
+                                    <p>Copyright 2025 Nodedrop All Rights Reserved</p>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     )
 }

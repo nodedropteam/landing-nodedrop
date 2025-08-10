@@ -5,12 +5,10 @@ import PortfolioGrid from '~/components/portfolio/portfolio-grid'
 
 export default function PortfolioPage() {
     return (
-        <>
-            <div className="page-wrapper content">
-                <Header />
-                <PortfolioGrid />
-                <Footer />
-            </div>
-        </>
+        <div className="page-wrapper content bg-primary text-primary-foreground">
+            <Header />
+            <PortfolioGrid />
+            <Footer />
+        </div>
     )
 }

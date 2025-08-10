@@ -17,6 +17,7 @@
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
+  --color-brand: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
@@ -41,12 +42,14 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-}
 
-body {
-  background-image: url("/bg_pattern.jpg");
-  background-size: 400px 400px;
-  background-repeat: repeat;
+  --text-heading1: var(--step-7);
+  --text-heading2: var(--step-5);
+  --text-heading3: var(--step-4);
+  --text-heading4: var(--step-3);
+  --text-heading5: var(--step-2);
+  --text-large: var(--step-1);
+  /* --text-large: var(--step-2); */
 }
 
 @layer base {
@@ -61,10 +64,12 @@ body {
 
 h1,h2,h3,h4 {
   text-wrap: balance;
+  line-height: 100%;
 }
 
 p,li,span {
   text-wrap: pretty;
+  line-height: 150%;
 }
 
 /* contentlayer */

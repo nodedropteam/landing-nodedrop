@@ -4,31 +4,31 @@ import { Button } from '../ui/button'
 
 const service_tiers = [
     {
-        name: "Express",
-        description: "Launch quickly with a clean, one-page site",
+        name: "Simple",
+        description: "Launch quickly with a clean, 1-3 page site",
         price: "$",
         features: [
-            "Custom one-page website design",
+            "Professinally designed template",
             "Responsive desktop & mobile layouts",
-            "Basic animations & interactions",
-            "Figma file delivery",
-            "Live website deployment",
-            "1 revision round",
-            "Launch video walkthrough"
+            "SEO ready",
+            "Accessibility compliant",
+            "Up to 1 Anti-Spam Contact form",
+            "Website Migration"
         ]
     },
     {
         name: "Standard",
-        description: "A refined one-page site with more features and polish",
+        description: "A refined multi-paged site with more features and polish",
         price: "$$",
         features: [
-            "Enhanced one-page website design",
-            "Advanced layout sections (e.g., FAQ, testimonials)",
-            "Smooth animations & micro-interactions",
-            "Figma file with style guide",
-            "Live site deployment + SEO basics",
-            "3 revision rounds",
-            "Training & handover support"
+            "Professinally designed template",
+            "Responsive desktop & mobile layouts",
+            "SEO Optimization",
+            "Easy to use CMS customization",
+            "Accessibility compliant",
+            "Up to 5 Anti-Spam Contact form",
+            "Custom copywriting for conversion",
+            "Website Migration"
         ]
     },
     {
@@ -36,13 +36,16 @@ const service_tiers = [
         description: "A full website experience for growing businesses",
         price: "$$$",
         features: [
-            "Multi-page website design",
-            "Custom design for each page (up to 5 pages)",
-            "Advanced animations & transitions",
-            "Figma design system",
-            "Live site with SEO, speed & accessibility optimizations",
-            "5 revision rounds",
-            "Post-launch support (2 weeks)"
+            "Professinally designed template",
+            "Responsive desktop & mobile layouts",
+            "SEO Optimization",
+            "Easy to use CMS customization",
+            "Accessibility compliant",
+            "Up to 5 Anti-Spam Contact form",
+            "Custom copywriting for conversion",
+            "Advanced analytics integration",
+            "Lead capture workflows",
+            "Website Migration"
         ]
     }
 ];
@@ -53,31 +56,41 @@ export default function ServiceTierList() {
         <section>
             <Wrapper scrollName='pricing' className='py-24'>
                 <div className="copy text-center space-y-4 mb-8">
-                    <h2 className='text-4xl font-bold text-center mb-8 max-w-[640px] mx-auto'>
+                    <h2 className='text-heading2 font-bold text-center mb-8 max-w-[30ch] mx-auto'>
                         Service package for any budget.
                     </h2>
-                    <p className=''>
+                    <p className='text-lg md:text-xl'>
                         {"Pick the package that's right for you."}
                     </p>
                 </div>
-                <div className="card-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="flex flex-wrap justify-center gap-8">
                     {
                         service_tiers.map((tier, index) => {
                             return (
-                                <div className="card bg-card space-y-6 p-3 border rounded-lg" key={index}>
-                                    <h3 className='text-lg font-medium italic'>{tier.name}</h3>
-                                    <p className='text-3xl font-semibold'>{tier.price}</p>
-                                    <p className='text-sm'>{tier.description}</p>
-                                    <Button className='w-full' size={`sm`}>Get Details</Button>
-                                    <ul className='space-y-4'>
-                                        {
-                                            tier.features.map((feature, index) => {
-                                                return (
-                                                    <li key={index}>{feature}</li>
-                                                )
-                                            })
-                                        }
-                                    </ul>
+                                <div key={index} className='basis-[320px] grow-0 shrink'>
+                                    <div className="card w-full h-full bg-brand text-background pt-8 px-6 flex flex-col" key={index}>
+                                        <div className="card-header">
+                                            <div className='flex justify-between items-center mb-4'>
+                                                <h3 className='card-title font-bold text-[28px]'>{tier.name}</h3>
+                                                <p className='text-3xl font-semibold'>{tier.price}</p>
+                                            </div>
+                                            <p className='text-sm'>{tier.description}</p>
+                                        </div>
+                                        <div className="card-content pl-8">
+                                            <ul className='list-disc mt-4 text-[14px] space-y-2'>
+                                                {
+                                                    tier.features.map((feature, index) => {
+                                                        return (
+                                                            <li key={index}>{feature}</li>
+                                                        )
+                                                    })
+                                                }
+                                            </ul>
+                                        </div>
+                                        <div className="card-footer pt-4 pb-4 justify-self-end grow flex flex-col justify-end">
+                                            {/* <Button className='w-full' variant={`secondary`}>Get Details</Button> */}
+                                        </div>
+                                    </div>
                                 </div>
                             )
                         })
