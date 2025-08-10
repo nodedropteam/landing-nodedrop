@@ -4,16 +4,16 @@ import { Button } from '../ui/button'
 import Link from 'next/link'
 import { Instagram } from "lucide-react";
 
-const footerMenuContact = [
-    {
-        name: "chilufya@nodedropp.com",
-        url: "mailto:chilufya@nodedropp.com"
-    },
-    {
-        name: "ig: @nodedropwebsites",
-        url: "https://www.instagram.com/nodedropwebsites/"
-    }
-]
+// const footerMenuContact = [
+//     {
+//         name: "chilufya@nodedropp.com",
+//         url: "mailto:chilufya@nodedropp.com"
+//     },
+//     {
+//         name: "ig: @nodedropwebsites",
+//         url: "https://www.instagram.com/nodedropwebsites/"
+//     }
+// ]
 
 export default function Footer() {
     return (

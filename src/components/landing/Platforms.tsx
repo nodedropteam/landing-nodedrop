@@ -3,25 +3,7 @@ import {
     TooltipContent,
     TooltipTrigger,
 } from "~/components/ui/tooltip"
-
-const processSteps = [
-    {
-        title: "Audit",
-        description: "Get a free 3 minute project audit discussing your project and your options."
-    },
-    {
-        title: "Place order",
-        description: "Pick the package that works best for you, sit back and let us handle it."
-    },
-    {
-        title: "Build",
-        description: "Receive your design within a few business days on average."
-    },
-    {
-        title: "Enjoy",
-        description: "Launch and watch your business out-perform and out-class your competitors."
-    }
-];
+import Image from "next/image"
 
 const platforms = [
     "wordpress logo.svg",
@@ -48,7 +30,12 @@ export default function Platforms() {
                             {platforms.map((platform) => (
                                 <Tooltip key={platform}>
                                     <TooltipTrigger className="flex">
-                                        <img src={`/logos/${platform}`} alt={platform.replace(' logo.svg', '')} className="max-h-12 object-contain" />
+                                        <Image 
+                                        src={`/logos/${platform}`} 
+                                        alt={platform.replace(' logo.svg', '')} 
+                                        height={48}
+                                        width={48}
+                                        className="object-contain" />
                                     </TooltipTrigger>
                                     <TooltipContent className="text-sm">
                                         <p>{platform.replace(' logo.svg', '').replace(/-/g, ' ')}</p>
