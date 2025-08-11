@@ -28,11 +28,11 @@ export default function Projects() {
 
                             <div className="flex flex-row flex-wrap gap-8">
                                 {projectPosters.map((poster, index) => (
-                                    <div key={index} className="basis-[400px] grow-0 shrink h-[500px] relative overflow-hidden relative">
+                                    <div key={index} className="basis-[400px] grow-0 shrink h-[500px] overflow-hidden relative">
                                         <Image
                                             src={`/posters/${poster.src}`}
                                             fill
-                                            alt={`Project ${index + 1}`} className="w-full h-auto object-cover" />
+                                            alt={`Project ${index + 1}`} className="w-full h-auto object-cover object-top" />
                                         <div className="card-content absolute left-0 top-0 w-full h-full flex flex-col gap-4 justify-end">
                                             <div className="header bg-accent text-accent-foreground">
                                                 <h3 className='text-[24px] font-bold p-6 w-full'>{poster.title}</h3>

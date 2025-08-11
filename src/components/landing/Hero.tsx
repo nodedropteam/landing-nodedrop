@@ -1,5 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
+import { Button } from '../ui/button'
+import Link from 'next/link'
 
 export default function Hero() {
     return (
@@ -26,16 +28,26 @@ export default function Hero() {
                     </div>
                     <div className="nodedropp-section-block-content relative z-10 grow shrink basis-auto content pt-[100px]">
                         <div className='w-full'>
-                        <div className="max-w-[60ch]">
-                            <div className='space-y-4'>
-                                <h1 className='text-heading1 font-bold mb-4'>
-                                    Real Websites Show Up Online
-                                </h1>
-                                <p className='text-lg md:text-xl lg:text-2xl max-w-[30ch]'>
-                                    We build fast, conversion-focused websites that help small businesses grow.
-                                </p>
+                            <div className="max-w-[60ch]">
+                                <div className='flex flex-col gap-2 pb-8'>
+                                    <h1 className='text-heading1 font-bold'>
+                                        Real Websites Show Up Online
+                                    </h1>
+                                    <p className='text-lg md:text-xl lg:text-2xl max-w-[30ch]'>
+                                        We build fast, conversion-focused websites that help small businesses grow.
+                                    </p>
+                                    <div className='mt-4 w-full flex flex-col gap-4 max-w-[250px]'>
+                                        <Link href={`/#pricing`} className='block'>
+                                            <Button className="w-full">Find Service</Button>
+                                        </Link>
+                                        <Link href={`/portfolio`} className='block'>
+                                            <Button className='border-secondary border-[3px] text-secondary bg-transparent w-full hover:bg-secondary/10'>See Our Work</Button>
+                                        </Link>
+
+                                    </div>
+
+                                </div>
                             </div>
-                        </div>
                         </div>
                     </div>
                 </div>
