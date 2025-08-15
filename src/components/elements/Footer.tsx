@@ -20,7 +20,7 @@ export default function Footer() {
         <footer className='full'>
             <div className="nodedrop-section-footer min-h-screen flex flex-col relative">
                 <div className="section-background"></div>
-                <div className="section-content grow shrink basis-auto content relative py-24 bg-accent text-accent-foreground">
+                <div className="section-content grow shrink basis-auto content relative py-24 bg-primary text-primary-foreground">
                     <div className="section-content-wrapper">
                         <div className="section-content-background"></div>
                         <div className="section-inner-content">

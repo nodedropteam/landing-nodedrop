@@ -26,8 +26,8 @@ export default function Hero() {
                             className="block md:hidden object-cover scale-105 opacity-30"
                         />
                     </div>
-                    <div className="nodedropp-section-block-content relative z-10 grow shrink basis-auto content pt-[100px]">
-                        <div className='w-full'>
+                    <div className="nodedropp-section-block-content relative z-10 grow shrink content basis-auto pt-[100px]">
+                        <div className='w-full feature'>
                             <div className="max-w-[60ch]">
                                 <div className='flex flex-col gap-2 pb-8'>
                                     <h1 className='text-heading1 font-bold'>
